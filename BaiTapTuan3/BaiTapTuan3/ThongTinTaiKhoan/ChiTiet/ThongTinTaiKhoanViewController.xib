@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThongTinTaiKhoanViewController" customModule="BaiTapTuan3" customModuleProvider="target">
+            <connections>
+                <outlet property="tableViewTK" destination="icD-0r-Yo8" id="GNo-QZ-ID9"/>
+                <outlet property="tableViewTT" destination="sgQ-cq-k56" id="saV-ef-x3r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-cq-k56" userLabel="Table View TK Thanh Toan">
+                    <rect key="frame" x="20" y="64" width="374" height="403"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="icD-0r-Yo8" userLabel="Table View TK Tiet Kiem">
+                    <rect key="frame" x="20" y="477" width="374" height="365"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="sgQ-cq-k56" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.45" id="HJo-Hd-3c5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="icD-0r-Yo8" secondAttribute="bottom" constant="20" id="QJO-9x-MSu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sgQ-cq-k56" secondAttribute="trailing" constant="20" id="TO7-5z-g8Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="icD-0r-Yo8" secondAttribute="trailing" constant="20" id="WZj-ba-2z8"/>
+                <constraint firstItem="sgQ-cq-k56" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="axl-Wb-1yE"/>
+                <constraint firstItem="icD-0r-Yo8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gXJ-ZP-eM1"/>
+                <constraint firstItem="icD-0r-Yo8" firstAttribute="top" secondItem="sgQ-cq-k56" secondAttribute="bottom" constant="10" id="oAH-EK-iFL"/>
+                <constraint firstItem="sgQ-cq-k56" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pbt-GX-k6l"/>
+            </constraints>
+            <point key="canvasLocation" x="8.6956521739130448" y="49.553571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
