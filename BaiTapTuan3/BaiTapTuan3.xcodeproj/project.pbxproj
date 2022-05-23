@@ -10,13 +10,16 @@
 		96AC62DD0A10821B2E15429D /* Pods_BaiTapTuan3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D2A7CA2BF83AD1FF569220 /* Pods_BaiTapTuan3.framework */; };
 		B4095DA8283600AF00F7AEDD /* ChiTietTKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DA6283600AF00F7AEDD /* ChiTietTKViewController.swift */; };
 		B4095DA9283600AF00F7AEDD /* ChiTietTKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DA7283600AF00F7AEDD /* ChiTietTKViewController.xib */; };
-		B4095DAE28361D4300F7AEDD /* TableViewCellChiTiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DAC28361D4300F7AEDD /* TableViewCellChiTiet.swift */; };
-		B4095DAF28361D4300F7AEDD /* TableViewCellChiTiet.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DAD28361D4300F7AEDD /* TableViewCellChiTiet.xib */; };
 		B4095DB128361D6400F7AEDD /* HeaderChiTiet.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DB028361D6400F7AEDD /* HeaderChiTiet.xib */; };
 		B4095DB528361D9400F7AEDD /* HeaderChiTiet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DB428361D9400F7AEDD /* HeaderChiTiet.swift */; };
 		B4095DB7283623E100F7AEDD /* ParseJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DB6283623E100F7AEDD /* ParseJSONData.swift */; };
 		B4095DB92836271F00F7AEDD /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */; };
 		B4095DC1283748C700F7AEDD /* DataHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */; };
+		B4095DC6283775EB00F7AEDD /* Cell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC4283775EB00F7AEDD /* Cell2.swift */; };
+		B4095DC7283775EB00F7AEDD /* Cell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DC5283775EB00F7AEDD /* Cell2.xib */; };
+		B4095DC928378EBF00F7AEDD /* DataLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */; };
+		B4095DD628379C4700F7AEDD /* Cell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DD428379C4700F7AEDD /* Cell3.swift */; };
+		B4095DD728379C4700F7AEDD /* Cell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DD528379C4700F7AEDD /* Cell3.xib */; };
 		B4C74B492834CD2E00C82682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B482834CD2E00C82682 /* AppDelegate.swift */; };
 		B4C74B4B2834CD2E00C82682 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */; };
 		B4C74B522834CD3200C82682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C74B512834CD3200C82682 /* Assets.xcassets */; };
@@ -35,13 +38,16 @@
 		570BD33C3CD39F9F4250E86C /* Pods-BaiTapTuan3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapTuan3.release.xcconfig"; path = "Target Support Files/Pods-BaiTapTuan3/Pods-BaiTapTuan3.release.xcconfig"; sourceTree = "<group>"; };
 		B4095DA6283600AF00F7AEDD /* ChiTietTKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietTKViewController.swift; sourceTree = "<group>"; };
 		B4095DA7283600AF00F7AEDD /* ChiTietTKViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChiTietTKViewController.xib; sourceTree = "<group>"; };
-		B4095DAC28361D4300F7AEDD /* TableViewCellChiTiet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellChiTiet.swift; sourceTree = "<group>"; };
-		B4095DAD28361D4300F7AEDD /* TableViewCellChiTiet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCellChiTiet.xib; sourceTree = "<group>"; };
 		B4095DB028361D6400F7AEDD /* HeaderChiTiet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderChiTiet.xib; sourceTree = "<group>"; };
 		B4095DB428361D9400F7AEDD /* HeaderChiTiet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderChiTiet.swift; sourceTree = "<group>"; };
 		B4095DB6283623E100F7AEDD /* ParseJSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSONData.swift; sourceTree = "<group>"; };
 		B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHeaderTableView.swift; sourceTree = "<group>"; };
+		B4095DC4283775EB00F7AEDD /* Cell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Cell2.swift; path = ../../../../BaiTapOOP1/BaiTapTuan3/BaiTapTuan3/Data/Cell2.swift; sourceTree = "<group>"; };
+		B4095DC5283775EB00F7AEDD /* Cell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Cell2.xib; path = ../../../../BaiTapOOP1/BaiTapTuan3/BaiTapTuan3/Data/Cell2.xib; sourceTree = "<group>"; };
+		B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLabelCell.swift; sourceTree = "<group>"; };
+		B4095DD428379C4700F7AEDD /* Cell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell3.swift; sourceTree = "<group>"; };
+		B4095DD528379C4700F7AEDD /* Cell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell3.xib; sourceTree = "<group>"; };
 		B4C74B452834CD2E00C82682 /* BaiTapTuan3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapTuan3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C74B482834CD2E00C82682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				B4095DBE28373F0100F7AEDD /* ChiTiet */,
-				B4095DAB28361D1200F7AEDD /* Cell */,
 			);
 			path = ChiTietThanhToan;
 			sourceTree = "<group>";
@@ -97,15 +102,6 @@
 				B4095DB428361D9400F7AEDD /* HeaderChiTiet.swift */,
 			);
 			path = Header;
-			sourceTree = "<group>";
-		};
-		B4095DAB28361D1200F7AEDD /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				B4095DAC28361D4300F7AEDD /* TableViewCellChiTiet.swift */,
-				B4095DAD28361D4300F7AEDD /* TableViewCellChiTiet.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		B4095DBE28373F0100F7AEDD /* ChiTiet */ = {
@@ -124,6 +120,24 @@
 				B4C74B5F2834D04000C82682 /* ThongTinTaiKhoanViewController.xib */,
 			);
 			path = ChiTiet;
+			sourceTree = "<group>";
+		};
+		B4095DC3283775BC00F7AEDD /* Cell2 */ = {
+			isa = PBXGroup;
+			children = (
+				B4095DC4283775EB00F7AEDD /* Cell2.swift */,
+				B4095DC5283775EB00F7AEDD /* Cell2.xib */,
+			);
+			path = Cell2;
+			sourceTree = "<group>";
+		};
+		B4095DD328379C3700F7AEDD /* Cell3 */ = {
+			isa = PBXGroup;
+			children = (
+				B4095DD428379C4700F7AEDD /* Cell3.swift */,
+				B4095DD528379C4700F7AEDD /* Cell3.xib */,
+			);
+			path = Cell3;
 			sourceTree = "<group>";
 		};
 		B4C74B3C2834CD2E00C82682 = {
@@ -149,6 +163,9 @@
 			children = (
 				B4C74B482834CD2E00C82682 /* AppDelegate.swift */,
 				B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */,
+				B4095DD328379C3700F7AEDD /* Cell3 */,
+				B4095DC3283775BC00F7AEDD /* Cell2 */,
+				B4C74B812834F21B00C82682 /* Cell1 */,
 				B4095DAA28361D0300F7AEDD /* Header */,
 				B4C74B842834F6AE00C82682 /* Data */,
 				B4095DA52835F19400F7AEDD /* ChiTietThanhToan */,
@@ -166,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				B4095DBF28373F1100F7AEDD /* ChiTiet */,
-				B4C74B812834F21B00C82682 /* Cell1 */,
 			);
 			path = ThongTinTaiKhoan;
 			sourceTree = "<group>";
@@ -183,11 +199,12 @@
 		B4C74B842834F6AE00C82682 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B4C74B5C2834CE2800C82682 /* data.json */,
 				B4C74B822834F69800C82682 /* MyData.swift */,
 				B4095DB6283623E100F7AEDD /* ParseJSONData.swift */,
 				B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */,
-				B4C74B5C2834CE2800C82682 /* data.json */,
 				B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */,
+				B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -260,13 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4095DB128361D6400F7AEDD /* HeaderChiTiet.xib in Resources */,
+				B4095DD728379C4700F7AEDD /* Cell3.xib in Resources */,
 				B4C74B552834CD3200C82682 /* LaunchScreen.storyboard in Resources */,
 				B4C74B7B2834E87000C82682 /* Cell.xib in Resources */,
-				B4095DAF28361D4300F7AEDD /* TableViewCellChiTiet.xib in Resources */,
 				B4095DA9283600AF00F7AEDD /* ChiTietTKViewController.xib in Resources */,
 				B4C74B6A2834D22B00C82682 /* Main.storyboard in Resources */,
 				B4C74B522834CD3200C82682 /* Assets.xcassets in Resources */,
 				B4C74B5D2834CE2800C82682 /* data.json in Resources */,
+				B4095DC7283775EB00F7AEDD /* Cell2.xib in Resources */,
 				B4C74B612834D04000C82682 /* ThongTinTaiKhoanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,12 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4095DC6283775EB00F7AEDD /* Cell2.swift in Sources */,
 				B4095DB528361D9400F7AEDD /* HeaderChiTiet.swift in Sources */,
-				B4095DAE28361D4300F7AEDD /* TableViewCellChiTiet.swift in Sources */,
 				B4095DB92836271F00F7AEDD /* DataDelegateProtocol.swift in Sources */,
 				B4C74B602834D04000C82682 /* ThongTinTaiKhoanViewController.swift in Sources */,
 				B4095DA8283600AF00F7AEDD /* ChiTietTKViewController.swift in Sources */,
+				B4095DC928378EBF00F7AEDD /* DataLabelCell.swift in Sources */,
 				B4095DC1283748C700F7AEDD /* DataHeaderTableView.swift in Sources */,
+				B4095DD628379C4700F7AEDD /* Cell3.swift in Sources */,
 				B4C74B492834CD2E00C82682 /* AppDelegate.swift in Sources */,
 				B4095DB7283623E100F7AEDD /* ParseJSONData.swift in Sources */,
 				B4C74B7A2834E87000C82682 /* Cell.swift in Sources */,

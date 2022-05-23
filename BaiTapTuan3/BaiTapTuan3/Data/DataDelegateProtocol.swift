@@ -10,13 +10,13 @@ import SwiftyJSON
 
 protocol DataDelegate {
     
-    func getDataAccount(data: [Acount])
-    func dataProcess(accountArrTT: [Acount], accountArrTK: [Acount])
-    func getData(data: String)
+    func getDataAccount(data: [Account])
+    func dataProcess(accountArrTT: [Account], accountArrTK: [Account])
+    func getUsername(userName: String)
 }
 
 extension DataDelegate {
-    func getData(data: String){
+    func getUsername(userName: String){
         print("")
     }
 }

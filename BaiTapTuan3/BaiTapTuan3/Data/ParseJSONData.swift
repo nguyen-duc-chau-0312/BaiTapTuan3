@@ -11,20 +11,22 @@ import SwiftyJSON
 class JSONData {
     
     var delegateData: DataDelegate?
-    var accountArr: [Acount] = []
-    var accountArrTT: [Acount] = []
-    var accountArrTK: [Acount] = []
+    var accountArr: [Account] = []
+    var accountArrTT: [Account] = []
+    var accountArrTK: [Account] = []
     var accountBankType: String = ""
+    var userName: String = ""
     
     func getDataJSON(){
+        
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 let myData = MyData(JSON(rawValue: jsonResult) ?? "")
                 let temp = myData.encryptStr.listAccount
-                let encrypt = myData.encryptStr.accountBankType
-                delegateData?.getData(data: encrypt)
+                userName = myData.encryptStr.userName
+                delegateData?.getUsername(userName: userName)
                 
                 for account in temp {
                     self.accountArr.append(account)
@@ -35,6 +37,7 @@ class JSONData {
                 
             }
         }
+        
         delegateData?.getDataAccount(data: accountArr)
     }
     
@@ -51,10 +54,9 @@ class JSONData {
         
     }
     
-    func getData(data: String) {
-        self.accountBankType = data
-        delegateData?.getData(data: accountBankType)
-    }
+//    func getDataUsername() {
+//        delegateData?.getUsername(userName: userName)
+//    }
     
 }
 

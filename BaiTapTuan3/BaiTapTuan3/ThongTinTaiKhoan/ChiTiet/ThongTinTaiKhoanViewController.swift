@@ -14,10 +14,10 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
     @IBOutlet weak var tableViewTK: UITableView!
     
     let myData = JSONData()
-    var accountArr: [Acount] = []
-    var accountArrTT: [Acount] = []
-    var accountArrTK: [Acount] = []
-    var accountType = ""
+    var accountArr: [Account] = []
+    var accountArrTT: [Account] = []
+    var accountArrTK: [Account] = []
+    var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,8 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         myData.delegateData = self
         myData.getDataJSON()
         myData.dataParseProcess()
-        myData.getData(data: accountType)
         
         //register cell1
-        
         let nib = UINib(nibName: "Cell", bundle: nil)
         self.tableViewTT.register(nib, forCellReuseIdentifier: "cell")
         
@@ -49,14 +47,14 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         
     }
     
-    func getDataAccount(data: [Acount]) {
+    func getDataAccount(data: [Account]) {
 
         for item in data {
             self.accountArr.append(item)
         }
     }
     
-    func dataProcess(accountArrTT: [Acount], accountArrTK: [Acount]) {
+    func dataProcess(accountArrTT: [Account], accountArrTK: [Account]) {
         for itemTT in accountArrTT {
             self.accountArrTT.append(itemTT)
         }
@@ -64,6 +62,10 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         for itemTK in accountArrTK {
             self.accountArrTK.append(itemTK)
         }
+    }
+    
+    func getUsername(userName: String) {
+        self.userName = userName
     }
 
 }
@@ -133,8 +135,11 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tableViewTT {
-            
-            self.navigationController?.pushViewController(ChiTietTKViewController(nibName: "ChiTietTKViewController", bundle: nil), animated: true)
+//            let chitietVC = ChiTietTKViewController()
+            let chitietVC = ChiTietTKViewController(nibName: "ChiTietTKViewController", bundle: nil)
+            chitietVC.account = accountArrTT[indexPath.row]
+            chitietVC.userName = userName
+            self.navigationController?.pushViewController(chitietVC, animated: true)
         }
     }
 

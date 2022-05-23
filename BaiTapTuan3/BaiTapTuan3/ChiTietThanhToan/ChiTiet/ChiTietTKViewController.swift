@@ -6,78 +6,71 @@
 //
 
 import UIKit
-import SwiftyJSON
 
-class ChiTietTKViewController: UIViewController, DataDelegate {
+class ChiTietTKViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
-    let jsonData = JSONData()
-    var accountArr: [Acount] = []
-    var accountArrTT: [Acount] = []
-    var accountArrTK: [Acount] = []
-    var accountType = ""
-    var titleLblCell = ["Chủ tài khoản", "Chi nhánh mở"]
+    var account: Account?
+    var userName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        jsonData.delegateData = self
-        jsonData.dataParseProcess()
-        jsonData.getDataJSON()
-        jsonData.getData(data: accountType)
-        //register cell
         
-        let nib = UINib(nibName: "TableViewCellChiTiet", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "cell")
+        //register cell1
+        let nib = UINib(nibName: "Cell3", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "cell3")
+        
+        //register cell2
+        let nib2 = UINib(nibName: "Cell2", bundle: nil)
+        self.tableView.register(nib2, forCellReuseIdentifier: "cell2")
         
         //register HeaderTT
         let nibHeader = UINib(nibName: "HeaderChiTiet", bundle: nil)
         self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        
     }
-    
-    func getDataAccount(data: [Acount]) {
-        for item in data {
-            self.accountArr.append(item)
-        }
-    }
-    
-    func dataProcess(accountArrTT: [Acount], accountArrTK: [Acount]) {
-        for itemTT in accountArrTT {
-            self.accountArrTT.append(itemTT)
-        }
-        for itemTK in accountArrTK {
-            self.accountArrTK.append(itemTK)
-        }
-    }
-    
-    func getData(data: String) {
-        self.accountType = data
-    }
-    
-    
     
 }
 
 extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3") as! Cell3
+            if let accountNo = account?.accountNo {
+                cell.lblStk.text = accountNo
+            }
+            if let balance = account?.balance, let ccy = account?.ccy {
+                cell.lblAmount.text = "\(balance) \(ccy)"
+            }
+            
+            return cell
+        } else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
+            cell.lblTop.text = DataLabelCell.chuTaiKhoan
+            cell.lblBottom.text = userName
+            return cell
+        }
         
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 55
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! HeaderChiTiet
-        headerView.lblContent.text = accountType
+        headerView.lblContent.text = DataHeaderTableView.accountTypeTT
         headerView.imgView.image = UIImage(named: DataHeaderTableView.imageWallet)
         headerView.contentView.backgroundColor = .white
         return headerView

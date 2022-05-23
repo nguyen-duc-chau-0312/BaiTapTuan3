@@ -25,27 +25,28 @@ struct MyData {
 struct Encrypt {
     let totalRecord: Int
     let accountBankType: String
-    var listAccount: [Acount]
+    var listAccount: [Account]
     var userName: String
     
     init(_ json: JSON) {
         self.totalRecord = json["TotalRecord"].intValue
+        self.userName = json["UserName"].stringValue
         let listAcc = json["ListAccount"].arrayValue
         self.accountBankType = json["AccountBankType"].stringValue
         self.listAccount = []
-        self.userName = json["UserName"].stringValue
         
         for item in listAcc {
-            self.listAccount.append(Acount(item))
+            self.listAccount.append(Account(item))
         }
     }
 }
 
-struct Acount {
+struct Account {
     let accountSource: String
     let productCode: String
     let accountMainText: String
     let accountNo: String
+    let branch: String
     let accountType: String
     let balance: String
     let balanceAval: String
@@ -59,6 +60,7 @@ struct Acount {
         self.productCode = json["ProductCode"].stringValue
         self.accountMainText = json["AccountMainText"].stringValue
         self.accountNo = json["AccountNo"].stringValue
+        self.branch = json["Branch"].stringValue
         self.accountType = json["AccountType"].stringValue
         self.balance = json["Balance"].stringValue
         self.balanceAval = json["BalanceAval"].stringValue
