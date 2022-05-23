@@ -54,6 +54,8 @@ struct Account {
     let accountTypeCode: String
     let openDate: String
     let expireDate: String
+    let term: String
+    let termType: String
     
     init(_ json: JSON) {
         self.accountSource = json["AccountSource"].stringValue
@@ -68,6 +70,8 @@ struct Account {
         self.accountTypeCode = json["AccountTypeCode"].stringValue
         self.openDate = json["OpenDate"].stringValue
         self.expireDate = json["ExpireDate"].stringValue
+        self.term = json["Term"].stringValue
+        self.termType = json["TermType"].stringValue
     }
     
 }

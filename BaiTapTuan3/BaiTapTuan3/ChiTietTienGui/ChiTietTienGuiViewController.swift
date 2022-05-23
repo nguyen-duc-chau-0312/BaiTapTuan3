@@ -1,23 +1,28 @@
 //
-//  ChiTietTKViewController.swift
+//  ChiTietTienGuiViewController.swift
 //  BaiTapTuan3
 //
-//  Created by Nguyen Duc Chau on 19/05/2022.
+//  Created by Nguyen Duc Chau on 23/05/2022.
 //
 
 import UIKit
 
-class ChiTietTKViewController: UIViewController{
-    
+class ChiTietTienGuiViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var account: Account?
-    var userName: String = ""
+    var userName = ""
     var branch = ""
+    var ccy = ""
+    var openDate = ""
+    var expireDate = ""
+    var term = ""
+    var termType = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "TÀI KHOẢN THANH TOÁN"
-                
+        title = "TÀI KHOẢN TIỀN GỬI"
+
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -34,16 +39,17 @@ class ChiTietTKViewController: UIViewController{
         self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
         
     }
-    
+
 }
 
-extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
+extension ChiTietTienGuiViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell3") as! Cell3
             if let accountNo = account?.accountNo {
@@ -66,9 +72,40 @@ extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
             cell.lblTop.text = DataLabelCell.chiNhanhMo
             cell.lblBottom.text = branch
             return cell
+        } else if indexPath.row == 3 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
+            cell.lblTop.text = DataLabelCell.ccy
+            cell.lblBottom.text = ccy
+            return cell
+        } else if indexPath.row == 4 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
+            cell.lblTop.text = DataLabelCell.openDate
+            cell.lblBottom.text = openDate
+            return cell
+        } else if indexPath.row == 5 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
+            cell.lblTop.text = DataLabelCell.expireDate
+            cell.lblBottom.text = expireDate
+            return cell
+        } else if indexPath.row == 6 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
+            cell.lblTop.text = DataLabelCell.term
+            cell.lblBottom.text = term
+            return cell
+        } else if indexPath.row == 7 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
+            cell.lblTop.text = DataLabelCell.termType
+            cell.lblBottom.text = termType
+            return cell
         }
         
         return UITableViewCell()
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -87,26 +124,6 @@ extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
+    
+    
 }
-
-extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-            else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-            }
-        }.resume()
-    }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
-    }
-}
-

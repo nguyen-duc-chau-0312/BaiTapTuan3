@@ -23,6 +23,7 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         super.viewDidLoad()
 
         title = "THÔNG TIN TÀI KHOẢN"
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.barTintColor = .orange
         
         tableViewTT.delegate = self
@@ -30,6 +31,12 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         tableViewTK.delegate = self
         tableViewTK.dataSource = self
         
+        tableViewTT.rowHeight = 70
+        tableViewTT.estimatedRowHeight = UITableView.automaticDimension
+        
+        tableViewTK.rowHeight = 70
+        tableViewTK.estimatedRowHeight = UITableView.automaticDimension
+
         myData.delegateData = self
         myData.getDataJSON()
         myData.dataParseProcess()
@@ -47,6 +54,13 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+    }
+
     func getDataAccount(data: [Account]) {
 
         for item in data {
@@ -102,8 +116,12 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
     
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 75
+//    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
         
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -139,8 +157,23 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
             let chitietVC = ChiTietTKViewController(nibName: "ChiTietTKViewController", bundle: nil)
             chitietVC.account = accountArrTT[indexPath.row]
             chitietVC.userName = userName
+            chitietVC.branch = accountArrTT[indexPath.row].branch
             self.navigationController?.pushViewController(chitietVC, animated: true)
+        } else if tableView == tableViewTK {
+            let chitietTienGuiVC = ChiTietTienGuiViewController(nibName: "ChiTietTienGuiViewController", bundle: nil)
+            chitietTienGuiVC.account = accountArrTK[indexPath.row]
+            chitietTienGuiVC.userName = userName
+            chitietTienGuiVC.branch = accountArrTK[indexPath.row].branch
+            chitietTienGuiVC.ccy = accountArrTK[indexPath.row].ccy
+            chitietTienGuiVC.openDate = accountArrTK[indexPath.row].openDate
+            chitietTienGuiVC.expireDate = accountArrTK[indexPath.row].expireDate
+            chitietTienGuiVC.term = accountArrTK[indexPath.row].term
+            chitietTienGuiVC.termType = accountArrTK[indexPath.row].termType
+            self.navigationController?.pushViewController(chitietTienGuiVC, animated: true)
         }
     }
+    
 
 }
+
+

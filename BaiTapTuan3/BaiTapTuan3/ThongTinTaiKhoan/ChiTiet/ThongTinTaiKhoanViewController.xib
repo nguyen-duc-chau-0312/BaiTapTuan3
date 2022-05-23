@@ -25,7 +25,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="icD-0r-Yo8" userLabel="Table View TK Tiet Kiem">
-                    <rect key="frame" x="20" y="477" width="374" height="365"/>
+                    <rect key="frame" x="20" y="477" width="374" height="235"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -33,7 +33,7 @@
             <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
                 <constraint firstItem="sgQ-cq-k56" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.45" id="HJo-Hd-3c5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="icD-0r-Yo8" secondAttribute="bottom" constant="20" id="QJO-9x-MSu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="icD-0r-Yo8" secondAttribute="bottom" constant="150" id="QJO-9x-MSu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sgQ-cq-k56" secondAttribute="trailing" constant="20" id="TO7-5z-g8Q"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="icD-0r-Yo8" secondAttribute="trailing" constant="20" id="WZj-ba-2z8"/>
                 <constraint firstItem="sgQ-cq-k56" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="axl-Wb-1yE"/>
