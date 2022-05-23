@@ -53,6 +53,9 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         self.tableViewTK.register(nibHeaderTK, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -60,7 +63,11 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+    }
+    
     func getDataAccount(data: [Account]) {
 
         for item in data {
