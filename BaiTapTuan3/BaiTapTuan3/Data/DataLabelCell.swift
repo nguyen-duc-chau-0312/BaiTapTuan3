@@ -15,5 +15,5 @@ struct DataLabelCell {
     static let openDate = "Ngày mở"
     static let expireDate = "Ngày đến hạn"
     static let term = "Kỳ hạn"
-    static let termType = "Loại ky hạn"
+    static let termType = "Loại kỳ hạn"
 }

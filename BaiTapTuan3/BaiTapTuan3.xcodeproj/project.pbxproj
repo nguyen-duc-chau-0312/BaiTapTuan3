@@ -15,13 +15,13 @@
 		B4095DB7283623E100F7AEDD /* ParseJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DB6283623E100F7AEDD /* ParseJSONData.swift */; };
 		B4095DB92836271F00F7AEDD /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */; };
 		B4095DC1283748C700F7AEDD /* DataHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */; };
-		B4095DC6283775EB00F7AEDD /* Cell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC4283775EB00F7AEDD /* Cell2.swift */; };
-		B4095DC7283775EB00F7AEDD /* Cell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DC5283775EB00F7AEDD /* Cell2.xib */; };
 		B4095DC928378EBF00F7AEDD /* DataLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */; };
 		B4095DD628379C4700F7AEDD /* Cell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DD428379C4700F7AEDD /* Cell3.swift */; };
 		B4095DD728379C4700F7AEDD /* Cell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DD528379C4700F7AEDD /* Cell3.xib */; };
 		B4139844283B1EF200416824 /* ChiTietTienGuiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4139842283B1EF200416824 /* ChiTietTienGuiViewController.swift */; };
 		B4139845283B1EF200416824 /* ChiTietTienGuiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4139843283B1EF200416824 /* ChiTietTienGuiViewController.xib */; };
+		B4ADB1C1283B801800BB2B29 /* Cell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1BF283B801800BB2B29 /* Cell2.swift */; };
+		B4ADB1C2283B801800BB2B29 /* Cell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADB1C0283B801800BB2B29 /* Cell2.xib */; };
 		B4C74B492834CD2E00C82682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B482834CD2E00C82682 /* AppDelegate.swift */; };
 		B4C74B4B2834CD2E00C82682 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */; };
 		B4C74B522834CD3200C82682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C74B512834CD3200C82682 /* Assets.xcassets */; };
@@ -45,13 +45,13 @@
 		B4095DB6283623E100F7AEDD /* ParseJSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSONData.swift; sourceTree = "<group>"; };
 		B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHeaderTableView.swift; sourceTree = "<group>"; };
-		B4095DC4283775EB00F7AEDD /* Cell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Cell2.swift; path = ../../../../BaiTapOOP1/BaiTapTuan3/BaiTapTuan3/Data/Cell2.swift; sourceTree = "<group>"; };
-		B4095DC5283775EB00F7AEDD /* Cell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Cell2.xib; path = ../../../../BaiTapOOP1/BaiTapTuan3/BaiTapTuan3/Data/Cell2.xib; sourceTree = "<group>"; };
 		B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLabelCell.swift; sourceTree = "<group>"; };
 		B4095DD428379C4700F7AEDD /* Cell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell3.swift; sourceTree = "<group>"; };
 		B4095DD528379C4700F7AEDD /* Cell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell3.xib; sourceTree = "<group>"; };
 		B4139842283B1EF200416824 /* ChiTietTienGuiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietTienGuiViewController.swift; sourceTree = "<group>"; };
 		B4139843283B1EF200416824 /* ChiTietTienGuiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChiTietTienGuiViewController.xib; sourceTree = "<group>"; };
+		B4ADB1BF283B801800BB2B29 /* Cell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell2.swift; sourceTree = "<group>"; };
+		B4ADB1C0283B801800BB2B29 /* Cell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell2.xib; sourceTree = "<group>"; };
 		B4C74B452834CD2E00C82682 /* BaiTapTuan3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapTuan3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C74B482834CD2E00C82682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 		B4095DC3283775BC00F7AEDD /* Cell2 */ = {
 			isa = PBXGroup;
 			children = (
-				B4095DC4283775EB00F7AEDD /* Cell2.swift */,
-				B4095DC5283775EB00F7AEDD /* Cell2.xib */,
+				B4ADB1BF283B801800BB2B29 /* Cell2.swift */,
+				B4ADB1C0283B801800BB2B29 /* Cell2.xib */,
 			);
 			path = Cell2;
 			sourceTree = "<group>";
@@ -293,13 +293,13 @@
 				B4139845283B1EF200416824 /* ChiTietTienGuiViewController.xib in Resources */,
 				B4095DB128361D6400F7AEDD /* HeaderChiTiet.xib in Resources */,
 				B4095DD728379C4700F7AEDD /* Cell3.xib in Resources */,
+				B4ADB1C2283B801800BB2B29 /* Cell2.xib in Resources */,
 				B4C74B552834CD3200C82682 /* LaunchScreen.storyboard in Resources */,
 				B4C74B7B2834E87000C82682 /* Cell.xib in Resources */,
 				B4095DA9283600AF00F7AEDD /* ChiTietTKViewController.xib in Resources */,
 				B4C74B6A2834D22B00C82682 /* Main.storyboard in Resources */,
 				B4C74B522834CD3200C82682 /* Assets.xcassets in Resources */,
 				B4C74B5D2834CE2800C82682 /* data.json in Resources */,
-				B4095DC7283775EB00F7AEDD /* Cell2.xib in Resources */,
 				B4C74B612834D04000C82682 /* ThongTinTaiKhoanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,13 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4095DC6283775EB00F7AEDD /* Cell2.swift in Sources */,
 				B4095DB528361D9400F7AEDD /* HeaderChiTiet.swift in Sources */,
 				B4095DB92836271F00F7AEDD /* DataDelegateProtocol.swift in Sources */,
 				B4C74B602834D04000C82682 /* ThongTinTaiKhoanViewController.swift in Sources */,
 				B4095DA8283600AF00F7AEDD /* ChiTietTKViewController.swift in Sources */,
 				B4095DC928378EBF00F7AEDD /* DataLabelCell.swift in Sources */,
 				B4095DC1283748C700F7AEDD /* DataHeaderTableView.swift in Sources */,
+				B4ADB1C1283B801800BB2B29 /* Cell2.swift in Sources */,
 				B4095DD628379C4700F7AEDD /* Cell3.swift in Sources */,
 				B4C74B492834CD2E00C82682 /* AppDelegate.swift in Sources */,
 				B4095DB7283623E100F7AEDD /* ParseJSONData.swift in Sources */,
