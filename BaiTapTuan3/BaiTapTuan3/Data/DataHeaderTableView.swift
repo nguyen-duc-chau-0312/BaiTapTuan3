@@ -8,7 +8,7 @@
 import Foundation
 
 struct DataHeaderTableView{
-    static let imageWallet = "credit-card"
+    static let imageWallet = "ic24PxCard"
     static let imagePiggyBank = "piggy-bank"
     static let accountTypeTT = "Tài khoản thanh toán"
     static let accountTypeTK = "Tài khoản tiết kiệm"
