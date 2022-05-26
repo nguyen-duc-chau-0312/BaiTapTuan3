@@ -22,7 +22,7 @@ struct MyData {
     }
 }
 
-struct Encrypt {
+struct Encrypt {                
     let totalRecord: Int
     let accountBankType: String
     var listAccount: [Account]
@@ -41,7 +41,8 @@ struct Encrypt {
     }
 }
 
-struct Account {
+
+struct Account {                //Đặt tên struct kèm tiền tố hoặc hậu tố để biết tưởng minh vai trò của struct, ví dụ: AccountObj
     let accountSource: String
     let productCode: String
     let accountMainText: String
@@ -73,5 +74,32 @@ struct Account {
         self.term = json["Term"].stringValue
         self.termType = json["TermType"].stringValue
     }
-    
+    //có thể tạo 1 hàm toDict convert từ obj sang dict
 }
+
+//hoặc tối ưu hơn: tạo extension:
+//extension String { //hoặc extension Encodable
+//func convertToDictionary() -> [[String: Any]]? {
+//    if let data = data(using: .utf8) {
+//        do {
+//            return try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
+//    return nil
+//}
+//}
+
+struct CellDataModel {
+    var title: String
+    var label: String
+}
+
+//tạo 1 mảng CellDataModel từ accountObj
+//cells : [CellDataModel] = [
+//    ["title": "số tài khoản", "label": account?.accountNo],
+//    ["title": "số dư", "label": account?.balanceAval],
+//    ["title": fixed text, "label": account.property],
+//    ...
+//]

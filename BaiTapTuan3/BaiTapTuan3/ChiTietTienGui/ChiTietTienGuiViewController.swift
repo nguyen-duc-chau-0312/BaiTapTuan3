@@ -9,6 +9,17 @@ import UIKit
 
 class ChiTietTienGuiViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
+//    refactor code lại: ko tạo nhiều biến thế này
+//    Cách 1: tạo 1 dictionary data:[String:String] = ["chủ tài khoản": account.userName,
+//                                                     "số dư": account.balance,
+//                                                        ...
+//                                                    ]
+//    Cách 2: tạo obj cellDataModel
+//    parse properties của account sang cellDataModel
+//    ...
+//    xem thêm bên file MyData
+    
     var account: Account?
     var userName = ""
     var branch = ""
@@ -17,6 +28,9 @@ class ChiTietTienGuiViewController: UIViewController {
     var expireDate = ""
     var term = ""
     var termType = ""
+    
+    
+     data["title":DataLabelCell.text , "label":account.property]
     
     
     override func viewDidLoad() {
@@ -45,11 +59,14 @@ class ChiTietTienGuiViewController: UIViewController {
 extension ChiTietTienGuiViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //để data động
+        //nếu dùng c1 return dict.allKeys.count
+        //nếu dùng c2 return cells.count
         return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        //refactor code: ko check theo index, data là dynamic
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell3") as! Cell3
             if let accountNo = account?.accountNo {
