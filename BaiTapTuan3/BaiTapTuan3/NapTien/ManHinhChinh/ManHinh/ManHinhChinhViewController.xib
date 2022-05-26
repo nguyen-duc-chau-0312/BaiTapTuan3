@@ -178,10 +178,13 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEX-E0-phe" userLabel="ButtonHuy">
                                             <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
-                                            <state key="normal" title="Button"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <state key="normal" title="Hủy ">
+                                                <color key="titleColor" red="0.92687952520000005" green="0.4420433044" blue="0.23520946500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
+                                                    <real key="value" value="20"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                     <color key="value" red="0.92687952520000005" green="0.4420433044" blue="0.23520946500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -196,7 +199,11 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKN-su-rgh" userLabel="ButtonTiepTuc">
                                             <rect key="frame" x="192" y="0.0" width="172" height="50"/>
-                                            <state key="normal" title="Button"/>
+                                            <color key="backgroundColor" red="0.92687952520000005" green="0.4420433044" blue="0.23520946500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <state key="normal" title="Tiếp tục">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                     <real key="value" value="1"/>
@@ -205,7 +212,7 @@
                                                     <color key="value" red="0.92687952520000005" green="0.4420433044" blue="0.23520946500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="15"/>
+                                                    <real key="value" value="20"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -244,7 +251,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fqI-FL-dCZ" secondAttribute="trailing" constant="20" id="5j0-Pa-2e2"/>
                 <constraint firstItem="fqI-FL-dCZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="LSU-k6-EHc"/>

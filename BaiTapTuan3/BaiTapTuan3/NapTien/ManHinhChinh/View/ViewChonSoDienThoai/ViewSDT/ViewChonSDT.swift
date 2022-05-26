@@ -35,4 +35,5 @@ class ViewChonSDT: UIView {
     @IBAction func TogglePressed(_ sender: UIButton) {
         btnToggle.isSelected = !btnToggle.isSelected
     }
+    
 }

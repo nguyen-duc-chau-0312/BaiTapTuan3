@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewXacThuc" customModule="BaiTapTuan3" customModuleProvider="target">
+            <connections>
+                <outlet property="lblMaXacThuc" destination="hdn-dK-V7L" id="Pda-iS-CsJ"/>
+                <outlet property="lblTextXacThuc" destination="dWm-r4-LOy" id="ajd-yX-8tH"/>
+                <outlet property="txtMaXacThuc" destination="Fvq-72-1LV" id="DcG-fL-zWd"/>
+                <outlet property="txtPassword" destination="ymp-71-KVy" id="duv-YO-JFj"/>
+                <outlet property="viewContent" destination="iN0-l3-epB" id="9Zj-Wj-VIP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="552" height="249"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWm-r4-LOy">
+                    <rect key="frame" x="14" y="16" width="488" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-dK-V7L">
+                    <rect key="frame" x="14" y="66.5" width="39.5" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMA-AS-Tvm">
+                    <rect key="frame" x="14" y="129.5" width="524" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="g2n-IG-ZTj"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu đăng nhập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-71-KVy">
+                    <rect key="frame" x="14" y="170.5" width="524" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CU3-WC-V8q">
+                    <rect key="frame" x="14" y="206.5" width="524" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="DKa-17-Bp1"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập mã xác thực" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fvq-72-1LV">
+                    <rect key="frame" x="14" y="97.5" width="524" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Fvq-72-1LV" firstAttribute="leading" secondItem="hdn-dK-V7L" secondAttribute="leading" id="264-Og-3qX"/>
+                <constraint firstItem="dWm-r4-LOy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="4wW-09-efX"/>
+                <constraint firstItem="Fvq-72-1LV" firstAttribute="top" secondItem="hdn-dK-V7L" secondAttribute="bottom" constant="12" id="6ES-Qc-tVZ"/>
+                <constraint firstItem="hdn-dK-V7L" firstAttribute="top" secondItem="dWm-r4-LOy" secondAttribute="bottom" constant="30" id="6pv-Ec-T7X"/>
+                <constraint firstItem="hdn-dK-V7L" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="999-Fv-eiG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CU3-WC-V8q" secondAttribute="trailing" constant="14" id="JS8-qP-s3B"/>
+                <constraint firstItem="CU3-WC-V8q" firstAttribute="top" secondItem="ymp-71-KVy" secondAttribute="bottom" constant="14" id="KwE-Cy-yTY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ymp-71-KVy" secondAttribute="trailing" constant="14" id="MMv-0X-uYa"/>
+                <constraint firstItem="CU3-WC-V8q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="ccP-dp-YOs"/>
+                <constraint firstItem="ymp-71-KVy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="dJg-mq-2hC"/>
+                <constraint firstItem="GMA-AS-Tvm" firstAttribute="top" secondItem="Fvq-72-1LV" secondAttribute="bottom" constant="10" id="kBl-Oo-EOf"/>
+                <constraint firstItem="ymp-71-KVy" firstAttribute="top" secondItem="GMA-AS-Tvm" secondAttribute="bottom" constant="40" id="ngd-HQ-GAf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GMA-AS-Tvm" secondAttribute="trailing" constant="14" id="uYe-qe-Ri3"/>
+                <constraint firstItem="dWm-r4-LOy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="uZc-XP-PWY"/>
+                <constraint firstItem="GMA-AS-Tvm" firstAttribute="trailing" secondItem="Fvq-72-1LV" secondAttribute="trailing" id="weR-zS-6IK"/>
+                <constraint firstAttribute="trailing" secondItem="dWm-r4-LOy" secondAttribute="trailing" constant="50" id="xfX-Zd-ErZ"/>
+                <constraint firstItem="GMA-AS-Tvm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="ylr-gV-fgt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="221.73913043478262" y="-160.37946428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

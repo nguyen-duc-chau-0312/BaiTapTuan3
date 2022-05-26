@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewChonMenhGia" customModule="BaiTapTuan3" customModuleProvider="target">
             <connections>
-                <outlet property="btn100VND" destination="NtF-U6-ATw" id="7IO-Ci-ATd"/>
+                <outlet property="btn100VND" destination="NtF-U6-ATw" id="zfw-Vb-eCQ"/>
                 <outlet property="btn10VND" destination="iqN-WA-CHr" id="uFf-Kf-pwj"/>
                 <outlet property="btn200VND" destination="VSM-NI-fod" id="3Cg-5C-5R9"/>
                 <outlet property="btn20VND" destination="mYB-ZI-M2s" id="dL7-gA-eKg"/>
@@ -38,11 +38,11 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="npQ-a9-lOA">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="npQ-a9-lOA">
                     <rect key="frame" x="10" y="51" width="395" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqN-WA-CHr">
-                            <rect key="frame" x="0.0" y="0.0" width="128.5" height="40"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqN-WA-CHr">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="OvU-lD-uAB"/>
                             </constraints>
@@ -61,11 +61,11 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="ClK-0P-UOV"/>
+                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="F5L-Q1-Qpo"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYB-ZI-M2s">
-                            <rect key="frame" x="133.5" y="0.0" width="128" height="40"/>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYB-ZI-M2s">
+                            <rect key="frame" x="137.5" y="0.0" width="120" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="gvw-Gl-uQG"/>
                             </constraints>
@@ -84,11 +84,11 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="Wcf-tk-bJz"/>
+                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="c0a-re-Nen"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9m-9o-a6O">
-                            <rect key="frame" x="266.5" y="0.0" width="128.5" height="40"/>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9m-9o-a6O">
+                            <rect key="frame" x="275" y="0.0" width="120" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="UBM-ra-lTK"/>
                             </constraints>
@@ -107,7 +107,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="S9C-pn-bqq"/>
+                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="wYo-ZS-gmg"/>
                             </connections>
                         </button>
                     </subviews>
@@ -121,11 +121,11 @@
                         <constraint firstAttribute="bottom" secondItem="b9m-9o-a6O" secondAttribute="bottom" id="tV3-D4-o34"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LIL-52-vTA">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LIL-52-vTA">
                     <rect key="frame" x="10" y="103" width="395" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtF-U6-ATw">
-                            <rect key="frame" x="0.0" y="0.0" width="128.5" height="40"/>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtF-U6-ATw">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="Cpq-e3-smn"/>
                             </constraints>
@@ -144,11 +144,11 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="cfB-Ce-QoU"/>
+                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="bbR-vl-w7f"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSM-NI-fod">
-                            <rect key="frame" x="133.5" y="0.0" width="128" height="40"/>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSM-NI-fod">
+                            <rect key="frame" x="137.5" y="0.0" width="120" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="aPy-y2-Epg"/>
                             </constraints>
@@ -167,11 +167,11 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="Uqb-3v-v1z"/>
+                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="fgm-wA-Igb"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-4f-xjR">
-                            <rect key="frame" x="266.5" y="0.0" width="128.5" height="40"/>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-4f-xjR">
+                            <rect key="frame" x="275" y="0.0" width="120" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="120" id="vMX-aa-iYa"/>
                             </constraints>
@@ -190,7 +190,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="9Os-61-C7o"/>
+                                <action selector="onClick:" destination="-1" eventType="touchUpInside" id="r6j-sY-13k"/>
                             </connections>
                         </button>
                     </subviews>

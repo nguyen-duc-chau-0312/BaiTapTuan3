@@ -37,6 +37,20 @@ class ChiTietTienGuiViewController: UIViewController {
         //register HeaderTT
         let nibHeader = UINib(nibName: "HeaderChiTiet", bundle: nil)
         self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Nạp thẻ", style: .plain, target: self, action: #selector(addTapped))
+        
+    }
+    
+    @objc func addTapped() {
+        let manHinhVC = ManHinhChinhViewController(nibName: "ManHinhChinhViewController", bundle: nil)
+        manHinhVC.account = account
+        self.navigationController?.pushViewController(manHinhVC, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
     }
 
