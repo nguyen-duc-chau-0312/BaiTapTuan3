@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ManHinhChinhViewController: UIViewController {
+class ManHinhChinhViewController: UIViewController, SendContactViewController {
+    
     @IBOutlet weak var viewTaiKhoan: ViewTaiKhoanNguon!
     @IBOutlet weak var viewSDT: ViewChonSDT!
     @IBOutlet weak var viewMenhGia: ViewChonMenhGia!
-    
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnTiepTuc: UIButton!
     var checkIsSelected = false
@@ -21,6 +21,7 @@ class ManHinhChinhViewController: UIViewController {
     var currentButton: [UIButton]?
     var menhGia = ""
     var sdt = ""
+    let contactVC = ContactViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class ManHinhChinhViewController: UIViewController {
         loadViewTK()
         loadViewSDT()
         loadViewMenhGia()
-        
+        contactVC.delegateSend = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +41,13 @@ class ManHinhChinhViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         loadViewSDT()
+        
     }
+    
+    func getSdt(sdt: String) {
+        self.sdt = sdt
+    }
+    
     
     func loadViewTK() {
         viewTaiKhoan.lblStk.text = account?.accountNo
@@ -116,7 +123,8 @@ class ManHinhChinhViewController: UIViewController {
     }
     
     @objc func contactTapped(_ sender: UIButton) {
-        let contactVC = ContactViewController(nibName: "ContactViewController", bundle: nil)
+//         contactVC = ContactViewController(nibName: "ContactViewController", bundle: nil)
+//        contactVC.delegateSend = self
         self.navigationController?.pushViewController(contactVC, animated: true)
     }
 

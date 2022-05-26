@@ -11,6 +11,9 @@ import Contacts
 class ContactViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var contacts = [FetchedContacts]()
+    var sdt = ""
+    
+    var delegateSend: SendContactViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +76,14 @@ extension ContactViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let taikhoanVC = ManHinhChinhViewController(nibName: "ManHinhChinhViewController", bundle: nil)
-        taikhoanVC.sdt = contacts[indexPath.row].telephone
-        self.navigationController?.popViewController(animated: true)
+        
+        self.sdt = contacts[indexPath.row].telephone
+        if sdt != "" {
+            delegateSend?.getSdt(sdt: sdt)
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            print("Loi")
+        }
         
     }
 }

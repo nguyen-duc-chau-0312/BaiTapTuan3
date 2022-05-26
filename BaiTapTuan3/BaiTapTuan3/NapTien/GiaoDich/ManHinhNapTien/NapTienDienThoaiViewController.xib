@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAv-hm-iPG" customClass="ViewTienDienThoai" customModule="BaiTapTuan3" customModuleProvider="target">
-                    <rect key="frame" x="20" y="64" width="374" height="230"/>
+                    <rect key="frame" x="20" y="64" width="374" height="250"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="230" id="qmM-b5-Dtq"/>
+                        <constraint firstAttribute="height" constant="250" id="qmM-b5-Dtq"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -40,7 +40,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xhz-id-kCJ">
-                    <rect key="frame" x="5" y="314" width="404" height="50"/>
+                    <rect key="frame" x="5" y="334" width="404" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gS-ps-6J4">
                             <rect key="frame" x="0.0" y="0.0" width="192" height="50"/>
