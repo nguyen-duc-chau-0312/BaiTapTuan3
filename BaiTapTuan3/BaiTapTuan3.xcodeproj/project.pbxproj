@@ -15,13 +15,24 @@
 		B4095DB7283623E100F7AEDD /* ParseJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DB6283623E100F7AEDD /* ParseJSONData.swift */; };
 		B4095DB92836271F00F7AEDD /* DataDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */; };
 		B4095DC1283748C700F7AEDD /* DataHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */; };
-		B4095DC928378EBF00F7AEDD /* DataLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */; };
+		B4095DC928378EBF00F7AEDD /* DataText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DC828378EBF00F7AEDD /* DataText.swift */; };
 		B4095DD628379C4700F7AEDD /* Cell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4095DD428379C4700F7AEDD /* Cell3.swift */; };
 		B4095DD728379C4700F7AEDD /* Cell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4095DD528379C4700F7AEDD /* Cell3.xib */; };
 		B4139844283B1EF200416824 /* ChiTietTienGuiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4139842283B1EF200416824 /* ChiTietTienGuiViewController.swift */; };
 		B4139845283B1EF200416824 /* ChiTietTienGuiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4139843283B1EF200416824 /* ChiTietTienGuiViewController.xib */; };
+		B483F2AF283F65E5008D77E7 /* SendContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483F2AE283F65E5008D77E7 /* SendContactViewController.swift */; };
 		B4ADB1C1283B801800BB2B29 /* Cell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1BF283B801800BB2B29 /* Cell2.swift */; };
 		B4ADB1C2283B801800BB2B29 /* Cell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADB1C0283B801800BB2B29 /* Cell2.xib */; };
+		B4ADB1CB283C772800BB2B29 /* ManHinhChinhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1C9283C772800BB2B29 /* ManHinhChinhViewController.swift */; };
+		B4ADB1CC283C772800BB2B29 /* ManHinhChinhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADB1CA283C772800BB2B29 /* ManHinhChinhViewController.xib */; };
+		B4ADB1EE283D1F7B00BB2B29 /* ViewTaiKhoanNguon.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADB1ED283D1F7B00BB2B29 /* ViewTaiKhoanNguon.xib */; };
+		B4ADB1F0283D1F8700BB2B29 /* ViewTaiKhoanNguon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1EF283D1F8700BB2B29 /* ViewTaiKhoanNguon.swift */; };
+		B4ADB1F3283DBB6D00BB2B29 /* ViewChonSDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1F2283DBB6C00BB2B29 /* ViewChonSDT.swift */; };
+		B4ADB1F5283DBB7E00BB2B29 /* ViewChonSDT.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADB1F4283DBB7E00BB2B29 /* ViewChonSDT.xib */; };
+		B4ADB1F8283DC53F00BB2B29 /* ViewChonMenhGia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1F7283DC53F00BB2B29 /* ViewChonMenhGia.swift */; };
+		B4ADB1FA283DC54F00BB2B29 /* ViewChonMenhGia.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADB1F9283DC54F00BB2B29 /* ViewChonMenhGia.xib */; };
+		B4ADB1FD283DCA9400BB2B29 /* ConerRadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1FC283DCA9400BB2B29 /* ConerRadiusView.swift */; };
+		B4ADB1FF283DCBC700BB2B29 /* ConerRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1FE283DCBC600BB2B29 /* ConerRadiusButton.swift */; };
 		B4C74B492834CD2E00C82682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B482834CD2E00C82682 /* AppDelegate.swift */; };
 		B4C74B4B2834CD2E00C82682 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */; };
 		B4C74B522834CD3200C82682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C74B512834CD3200C82682 /* Assets.xcassets */; };
@@ -34,6 +45,21 @@
 		B4C74B7A2834E87000C82682 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B782834E87000C82682 /* Cell.swift */; };
 		B4C74B7B2834E87000C82682 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C74B792834E87000C82682 /* Cell.xib */; };
 		B4C74B832834F69800C82682 /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C74B822834F69800C82682 /* MyData.swift */; };
+		B4D937C2283E3C830086E238 /* NapTienDienThoaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937C0283E3C830086E238 /* NapTienDienThoaiViewController.swift */; };
+		B4D937C3283E3C830086E238 /* NapTienDienThoaiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D937C1283E3C830086E238 /* NapTienDienThoaiViewController.xib */; };
+		B4D937C6283E3CB00086E238 /* ViewTienDienThoai.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937C5283E3CB00086E238 /* ViewTienDienThoai.swift */; };
+		B4D937C8283E3CC90086E238 /* ViewTienDienThoai.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D937C7283E3CC90086E238 /* ViewTienDienThoai.xib */; };
+		B4D937CC283F20070086E238 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937CA283F20070086E238 /* ContactViewController.swift */; };
+		B4D937CD283F20070086E238 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D937CB283F20070086E238 /* ContactViewController.xib */; };
+		B4D937D1283F20400086E238 /* CellContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937CF283F20400086E238 /* CellContact.swift */; };
+		B4D937D2283F20400086E238 /* CellContact.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D937D0283F20400086E238 /* CellContact.xib */; };
+		B4D937D5283F2C150086E238 /* FetchedContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937D4283F2C150086E238 /* FetchedContacts.swift */; };
+		B4D937DB283F39F40086E238 /* XacThucViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937D9283F39F40086E238 /* XacThucViewController.swift */; };
+		B4D937DC283F39F40086E238 /* XacThucViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D937DA283F39F40086E238 /* XacThucViewController.xib */; };
+		B4D937DE283F3B8B0086E238 /* ViewXacThuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937DD283F3B8B0086E238 /* ViewXacThuc.swift */; };
+		B4D937E0283F3B980086E238 /* ViewXacThuc.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D937DF283F3B980086E238 /* ViewXacThuc.xib */; };
+		B4D937E3283F3E400086E238 /* ViewTouchID.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D937E2283F3E400086E238 /* ViewTouchID.xib */; };
+		B4D937E5283F3E530086E238 /* ViewTouchID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D937E4283F3E530086E238 /* ViewTouchID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +71,24 @@
 		B4095DB6283623E100F7AEDD /* ParseJSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSONData.swift; sourceTree = "<group>"; };
 		B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegateProtocol.swift; sourceTree = "<group>"; };
 		B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHeaderTableView.swift; sourceTree = "<group>"; };
-		B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLabelCell.swift; sourceTree = "<group>"; };
+		B4095DC828378EBF00F7AEDD /* DataText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataText.swift; sourceTree = "<group>"; };
 		B4095DD428379C4700F7AEDD /* Cell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell3.swift; sourceTree = "<group>"; };
 		B4095DD528379C4700F7AEDD /* Cell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell3.xib; sourceTree = "<group>"; };
 		B4139842283B1EF200416824 /* ChiTietTienGuiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietTienGuiViewController.swift; sourceTree = "<group>"; };
 		B4139843283B1EF200416824 /* ChiTietTienGuiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChiTietTienGuiViewController.xib; sourceTree = "<group>"; };
+		B483F2AE283F65E5008D77E7 /* SendContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendContactViewController.swift; sourceTree = "<group>"; };
 		B4ADB1BF283B801800BB2B29 /* Cell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell2.swift; sourceTree = "<group>"; };
 		B4ADB1C0283B801800BB2B29 /* Cell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell2.xib; sourceTree = "<group>"; };
+		B4ADB1C9283C772800BB2B29 /* ManHinhChinhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManHinhChinhViewController.swift; sourceTree = "<group>"; };
+		B4ADB1CA283C772800BB2B29 /* ManHinhChinhViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManHinhChinhViewController.xib; sourceTree = "<group>"; };
+		B4ADB1ED283D1F7B00BB2B29 /* ViewTaiKhoanNguon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewTaiKhoanNguon.xib; sourceTree = "<group>"; };
+		B4ADB1EF283D1F8700BB2B29 /* ViewTaiKhoanNguon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTaiKhoanNguon.swift; sourceTree = "<group>"; };
+		B4ADB1F2283DBB6C00BB2B29 /* ViewChonSDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewChonSDT.swift; sourceTree = "<group>"; };
+		B4ADB1F4283DBB7E00BB2B29 /* ViewChonSDT.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewChonSDT.xib; sourceTree = "<group>"; };
+		B4ADB1F7283DC53F00BB2B29 /* ViewChonMenhGia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewChonMenhGia.swift; sourceTree = "<group>"; };
+		B4ADB1F9283DC54F00BB2B29 /* ViewChonMenhGia.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewChonMenhGia.xib; sourceTree = "<group>"; };
+		B4ADB1FC283DCA9400BB2B29 /* ConerRadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConerRadiusView.swift; sourceTree = "<group>"; };
+		B4ADB1FE283DCBC600BB2B29 /* ConerRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConerRadiusButton.swift; sourceTree = "<group>"; };
 		B4C74B452834CD2E00C82682 /* BaiTapTuan3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapTuan3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C74B482834CD2E00C82682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +103,21 @@
 		B4C74B782834E87000C82682 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		B4C74B792834E87000C82682 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		B4C74B822834F69800C82682 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
+		B4D937C0283E3C830086E238 /* NapTienDienThoaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NapTienDienThoaiViewController.swift; sourceTree = "<group>"; };
+		B4D937C1283E3C830086E238 /* NapTienDienThoaiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NapTienDienThoaiViewController.xib; sourceTree = "<group>"; };
+		B4D937C5283E3CB00086E238 /* ViewTienDienThoai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTienDienThoai.swift; sourceTree = "<group>"; };
+		B4D937C7283E3CC90086E238 /* ViewTienDienThoai.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewTienDienThoai.xib; sourceTree = "<group>"; };
+		B4D937CA283F20070086E238 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		B4D937CB283F20070086E238 /* ContactViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
+		B4D937CF283F20400086E238 /* CellContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellContact.swift; sourceTree = "<group>"; };
+		B4D937D0283F20400086E238 /* CellContact.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellContact.xib; sourceTree = "<group>"; };
+		B4D937D4283F2C150086E238 /* FetchedContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedContacts.swift; sourceTree = "<group>"; };
+		B4D937D9283F39F40086E238 /* XacThucViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XacThucViewController.swift; sourceTree = "<group>"; };
+		B4D937DA283F39F40086E238 /* XacThucViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XacThucViewController.xib; sourceTree = "<group>"; };
+		B4D937DD283F3B8B0086E238 /* ViewXacThuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewXacThuc.swift; sourceTree = "<group>"; };
+		B4D937DF283F3B980086E238 /* ViewXacThuc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewXacThuc.xib; sourceTree = "<group>"; };
+		B4D937E2283F3E400086E238 /* ViewTouchID.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewTouchID.xib; sourceTree = "<group>"; };
+		B4D937E4283F3E530086E238 /* ViewTouchID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTouchID.swift; sourceTree = "<group>"; };
 		D7D2A7CA2BF83AD1FF569220 /* Pods_BaiTapTuan3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaiTapTuan3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E230EFEB45C6A306BDBA7C /* Pods-BaiTapTuan3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapTuan3.debug.xcconfig"; path = "Target Support Files/Pods-BaiTapTuan3/Pods-BaiTapTuan3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +205,100 @@
 			path = ChiTietTienGui;
 			sourceTree = "<group>";
 		};
+		B4ADB1C5283C769300BB2B29 /* NapTien */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1C8283C770A00BB2B29 /* XacThucGiaoDich */,
+				B4ADB1C7283C76FE00BB2B29 /* GiaoDich */,
+				B4ADB1C6283C76B900BB2B29 /* ManHinhChinh */,
+			);
+			path = NapTien;
+			sourceTree = "<group>";
+		};
+		B4ADB1C6283C76B900BB2B29 /* ManHinhChinh */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1E3283CBD5300BB2B29 /* View */,
+				B4ADB1CE283C935300BB2B29 /* ManHinh */,
+			);
+			path = ManHinhChinh;
+			sourceTree = "<group>";
+		};
+		B4ADB1C7283C76FE00BB2B29 /* GiaoDich */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937C4283E3C9A0086E238 /* View */,
+				B4D937BF283E3C630086E238 /* ManHinhNapTien */,
+			);
+			path = GiaoDich;
+			sourceTree = "<group>";
+		};
+		B4ADB1C8283C770A00BB2B29 /* XacThucGiaoDich */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937E6283F5A510086E238 /* View */,
+				B4D937D7283F39C80086E238 /* ManhinhXacThuc */,
+			);
+			path = XacThucGiaoDich;
+			sourceTree = "<group>";
+		};
+		B4ADB1CE283C935300BB2B29 /* ManHinh */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1C9283C772800BB2B29 /* ManHinhChinhViewController.swift */,
+				B4ADB1CA283C772800BB2B29 /* ManHinhChinhViewController.xib */,
+			);
+			path = ManHinh;
+			sourceTree = "<group>";
+		};
+		B4ADB1E3283CBD5300BB2B29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1F6283DC52B00BB2B29 /* ViewChonMenhGia */,
+				B4ADB1F1283DBB4800BB2B29 /* ViewChonSoDienThoai */,
+				B4ADB1E4283CBD5800BB2B29 /* ViewTaiKhoan */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4ADB1E4283CBD5800BB2B29 /* ViewTaiKhoan */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1EF283D1F8700BB2B29 /* ViewTaiKhoanNguon.swift */,
+				B4ADB1ED283D1F7B00BB2B29 /* ViewTaiKhoanNguon.xib */,
+			);
+			path = ViewTaiKhoan;
+			sourceTree = "<group>";
+		};
+		B4ADB1F1283DBB4800BB2B29 /* ViewChonSoDienThoai */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937D3283F2BCE0086E238 /* DataContact */,
+				B4D937CE283F201F0086E238 /* CellContact */,
+				B4D937C9283F1FEB0086E238 /* Contact */,
+				B4D937D6283F2FD40086E238 /* ViewSDT */,
+			);
+			path = ViewChonSoDienThoai;
+			sourceTree = "<group>";
+		};
+		B4ADB1F6283DC52B00BB2B29 /* ViewChonMenhGia */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1F7283DC53F00BB2B29 /* ViewChonMenhGia.swift */,
+				B4ADB1F9283DC54F00BB2B29 /* ViewChonMenhGia.xib */,
+			);
+			path = ViewChonMenhGia;
+			sourceTree = "<group>";
+		};
+		B4ADB1FB283DCA7A00BB2B29 /* Radius */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1FC283DCA9400BB2B29 /* ConerRadiusView.swift */,
+				B4ADB1FE283DCBC600BB2B29 /* ConerRadiusButton.swift */,
+			);
+			path = Radius;
+			sourceTree = "<group>";
+		};
 		B4C74B3C2834CD2E00C82682 = {
 			isa = PBXGroup;
 			children = (
@@ -176,11 +322,13 @@
 			children = (
 				B4C74B482834CD2E00C82682 /* AppDelegate.swift */,
 				B4C74B4A2834CD2E00C82682 /* SceneDelegate.swift */,
+				B4ADB1FB283DCA7A00BB2B29 /* Radius */,
 				B4095DD328379C3700F7AEDD /* Cell3 */,
 				B4095DC3283775BC00F7AEDD /* Cell2 */,
 				B4C74B812834F21B00C82682 /* Cell1 */,
 				B4095DAA28361D0300F7AEDD /* Header */,
 				B4C74B842834F6AE00C82682 /* Data */,
+				B4ADB1C5283C769300BB2B29 /* NapTien */,
 				B4139841283B1EBD00416824 /* ChiTietTienGui */,
 				B4095DA52835F19400F7AEDD /* ChiTietThanhToan */,
 				B4C74B622834D04400C82682 /* ThongTinTaiKhoan */,
@@ -218,9 +366,99 @@
 				B4095DB6283623E100F7AEDD /* ParseJSONData.swift */,
 				B4095DB82836271F00F7AEDD /* DataDelegateProtocol.swift */,
 				B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */,
-				B4095DC828378EBF00F7AEDD /* DataLabelCell.swift */,
+				B4095DC828378EBF00F7AEDD /* DataText.swift */,
+				B483F2AE283F65E5008D77E7 /* SendContactViewController.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B4D937BF283E3C630086E238 /* ManHinhNapTien */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937C0283E3C830086E238 /* NapTienDienThoaiViewController.swift */,
+				B4D937C1283E3C830086E238 /* NapTienDienThoaiViewController.xib */,
+			);
+			path = ManHinhNapTien;
+			sourceTree = "<group>";
+		};
+		B4D937C4283E3C9A0086E238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937C5283E3CB00086E238 /* ViewTienDienThoai.swift */,
+				B4D937C7283E3CC90086E238 /* ViewTienDienThoai.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4D937C9283F1FEB0086E238 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937CA283F20070086E238 /* ContactViewController.swift */,
+				B4D937CB283F20070086E238 /* ContactViewController.xib */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		B4D937CE283F201F0086E238 /* CellContact */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937CF283F20400086E238 /* CellContact.swift */,
+				B4D937D0283F20400086E238 /* CellContact.xib */,
+			);
+			path = CellContact;
+			sourceTree = "<group>";
+		};
+		B4D937D3283F2BCE0086E238 /* DataContact */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937D4283F2C150086E238 /* FetchedContacts.swift */,
+			);
+			path = DataContact;
+			sourceTree = "<group>";
+		};
+		B4D937D6283F2FD40086E238 /* ViewSDT */ = {
+			isa = PBXGroup;
+			children = (
+				B4ADB1F2283DBB6C00BB2B29 /* ViewChonSDT.swift */,
+				B4ADB1F4283DBB7E00BB2B29 /* ViewChonSDT.xib */,
+			);
+			path = ViewSDT;
+			sourceTree = "<group>";
+		};
+		B4D937D7283F39C80086E238 /* ManhinhXacThuc */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937D9283F39F40086E238 /* XacThucViewController.swift */,
+				B4D937DA283F39F40086E238 /* XacThucViewController.xib */,
+			);
+			path = ManhinhXacThuc;
+			sourceTree = "<group>";
+		};
+		B4D937D8283F39D30086E238 /* ViewXacThuc */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937DD283F3B8B0086E238 /* ViewXacThuc.swift */,
+				B4D937DF283F3B980086E238 /* ViewXacThuc.xib */,
+			);
+			path = ViewXacThuc;
+			sourceTree = "<group>";
+		};
+		B4D937E1283F3D5B0086E238 /* ViewTouchID */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937E4283F3E530086E238 /* ViewTouchID.swift */,
+				B4D937E2283F3E400086E238 /* ViewTouchID.xib */,
+			);
+			path = ViewTouchID;
+			sourceTree = "<group>";
+		};
+		B4D937E6283F5A510086E238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4D937E1283F3D5B0086E238 /* ViewTouchID */,
+				B4D937D8283F39D30086E238 /* ViewXacThuc */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E6402CA80793D23966EFB60F /* Frameworks */ = {
@@ -290,17 +528,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D937D2283F20400086E238 /* CellContact.xib in Resources */,
 				B4139845283B1EF200416824 /* ChiTietTienGuiViewController.xib in Resources */,
+				B4D937CD283F20070086E238 /* ContactViewController.xib in Resources */,
+				B4D937E3283F3E400086E238 /* ViewTouchID.xib in Resources */,
+				B4ADB1EE283D1F7B00BB2B29 /* ViewTaiKhoanNguon.xib in Resources */,
 				B4095DB128361D6400F7AEDD /* HeaderChiTiet.xib in Resources */,
+				B4D937DC283F39F40086E238 /* XacThucViewController.xib in Resources */,
 				B4095DD728379C4700F7AEDD /* Cell3.xib in Resources */,
+				B4D937C8283E3CC90086E238 /* ViewTienDienThoai.xib in Resources */,
+				B4ADB1F5283DBB7E00BB2B29 /* ViewChonSDT.xib in Resources */,
 				B4ADB1C2283B801800BB2B29 /* Cell2.xib in Resources */,
 				B4C74B552834CD3200C82682 /* LaunchScreen.storyboard in Resources */,
 				B4C74B7B2834E87000C82682 /* Cell.xib in Resources */,
 				B4095DA9283600AF00F7AEDD /* ChiTietTKViewController.xib in Resources */,
 				B4C74B6A2834D22B00C82682 /* Main.storyboard in Resources */,
+				B4D937E0283F3B980086E238 /* ViewXacThuc.xib in Resources */,
 				B4C74B522834CD3200C82682 /* Assets.xcassets in Resources */,
 				B4C74B5D2834CE2800C82682 /* data.json in Resources */,
+				B4ADB1FA283DC54F00BB2B29 /* ViewChonMenhGia.xib in Resources */,
 				B4C74B612834D04000C82682 /* ThongTinTaiKhoanViewController.xib in Resources */,
+				B4D937C3283E3C830086E238 /* NapTienDienThoaiViewController.xib in Resources */,
+				B4ADB1CC283C772800BB2B29 /* ManHinhChinhViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,20 +602,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4ADB1F3283DBB6D00BB2B29 /* ViewChonSDT.swift in Sources */,
+				B4D937D1283F20400086E238 /* CellContact.swift in Sources */,
 				B4095DB528361D9400F7AEDD /* HeaderChiTiet.swift in Sources */,
+				B4D937C2283E3C830086E238 /* NapTienDienThoaiViewController.swift in Sources */,
 				B4095DB92836271F00F7AEDD /* DataDelegateProtocol.swift in Sources */,
+				B4D937DB283F39F40086E238 /* XacThucViewController.swift in Sources */,
 				B4C74B602834D04000C82682 /* ThongTinTaiKhoanViewController.swift in Sources */,
 				B4095DA8283600AF00F7AEDD /* ChiTietTKViewController.swift in Sources */,
-				B4095DC928378EBF00F7AEDD /* DataLabelCell.swift in Sources */,
+				B4095DC928378EBF00F7AEDD /* DataText.swift in Sources */,
+				B4ADB1FD283DCA9400BB2B29 /* ConerRadiusView.swift in Sources */,
 				B4095DC1283748C700F7AEDD /* DataHeaderTableView.swift in Sources */,
 				B4ADB1C1283B801800BB2B29 /* Cell2.swift in Sources */,
 				B4095DD628379C4700F7AEDD /* Cell3.swift in Sources */,
+				B483F2AF283F65E5008D77E7 /* SendContactViewController.swift in Sources */,
 				B4C74B492834CD2E00C82682 /* AppDelegate.swift in Sources */,
+				B4ADB1F0283D1F8700BB2B29 /* ViewTaiKhoanNguon.swift in Sources */,
 				B4095DB7283623E100F7AEDD /* ParseJSONData.swift in Sources */,
 				B4C74B7A2834E87000C82682 /* Cell.swift in Sources */,
+				B4D937D5283F2C150086E238 /* FetchedContacts.swift in Sources */,
 				B4C74B832834F69800C82682 /* MyData.swift in Sources */,
+				B4D937DE283F3B8B0086E238 /* ViewXacThuc.swift in Sources */,
+				B4D937C6283E3CB00086E238 /* ViewTienDienThoai.swift in Sources */,
+				B4D937E5283F3E530086E238 /* ViewTouchID.swift in Sources */,
+				B4D937CC283F20070086E238 /* ContactViewController.swift in Sources */,
+				B4ADB1FF283DCBC700BB2B29 /* ConerRadiusButton.swift in Sources */,
 				B4C74B6B2834D22B00C82682 /* ViewController.swift in Sources */,
 				B4C74B4B2834CD2E00C82682 /* SceneDelegate.swift in Sources */,
+				B4ADB1CB283C772800BB2B29 /* ManHinhChinhViewController.swift in Sources */,
+				B4ADB1F8283DC53F00BB2B29 /* ViewChonMenhGia.swift in Sources */,
 				B4139844283B1EF200416824 /* ChiTietTienGuiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
