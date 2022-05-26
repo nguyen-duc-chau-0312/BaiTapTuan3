@@ -47,6 +47,7 @@ class ChiTietTKViewController: UIViewController{
     
     @objc func addTapped() {
         let manHinhVC = ManHinhChinhViewController(nibName: "ManHinhChinhViewController", bundle: nil)
+        manHinhVC.account = account
         self.navigationController?.pushViewController(manHinhVC, animated: true)
     }
     
@@ -72,13 +73,13 @@ extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.chuTaiKhoan
+            cell.lblTop.text = DataText.chuTaiKhoan
             cell.lblBottom.text = userName
             return cell
         } else if indexPath.row == 2 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.chiNhanhMo
+            cell.lblTop.text = DataText.chiNhanhMo
             cell.lblBottom.text = branch
             return cell
         }
@@ -102,26 +103,5 @@ extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
+    
 }
-
-extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-            else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-            }
-        }.resume()
-    }
-    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
-    }
-}
-

@@ -51,6 +51,20 @@ class ChiTietTienGuiViewController: UIViewController {
         //register HeaderTT
         let nibHeader = UINib(nibName: "HeaderChiTiet", bundle: nil)
         self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Nạp thẻ", style: .plain, target: self, action: #selector(addTapped))
+        
+    }
+    
+    @objc func addTapped() {
+        let manHinhVC = ManHinhChinhViewController(nibName: "ManHinhChinhViewController", bundle: nil)
+        manHinhVC.account = account
+        self.navigationController?.pushViewController(manHinhVC, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
     }
 
@@ -80,43 +94,43 @@ extension ChiTietTienGuiViewController: UITableViewDataSource, UITableViewDelega
         } else if indexPath.row == 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.chuTaiKhoan
+            cell.lblTop.text = DataText.chuTaiKhoan
             cell.lblBottom.text = userName
             return cell
         } else if indexPath.row == 2 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.chiNhanhMo
+            cell.lblTop.text = DataText.chiNhanhMo
             cell.lblBottom.text = branch
             return cell
         } else if indexPath.row == 3 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.ccy
+            cell.lblTop.text = DataText.ccy
             cell.lblBottom.text = ccy
             return cell
         } else if indexPath.row == 4 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.openDate
+            cell.lblTop.text = DataText.openDate
             cell.lblBottom.text = openDate
             return cell
         } else if indexPath.row == 5 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.expireDate
+            cell.lblTop.text = DataText.expireDate
             cell.lblBottom.text = expireDate
             return cell
         } else if indexPath.row == 6 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.term
+            cell.lblTop.text = DataText.term
             cell.lblBottom.text = term
             return cell
         } else if indexPath.row == 7 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataLabelCell.termType
+            cell.lblTop.text = DataText.termType
             cell.lblBottom.text = termType
             return cell
         }
