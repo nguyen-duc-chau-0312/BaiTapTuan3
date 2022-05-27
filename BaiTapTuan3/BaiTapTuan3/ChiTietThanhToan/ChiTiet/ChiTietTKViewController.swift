@@ -11,20 +11,23 @@ class ChiTietTKViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     //refactor tương tự tk tiền gửi
-    var account: Account?
-    var userName: String = ""
-    var branch = ""
+    
+    var account: AccountObj?
+    var userName = ""
+    var dictAccount = [CellDataModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "TÀI KHOẢN THANH TOÁN"
-                
+        
+        dictAccount = [
+            CellDataModel(title: account!.accountNo, label: "Số dư: \((account?.balance)!) \((account?.ccy)!)"),
+            CellDataModel(title: "Chủ tài khoản", label: userName),
+            CellDataModel(title: "Chi nhánh mở", label: account?.branch ?? "")
+        ]
+        
         tableView.delegate = self
         tableView.dataSource = self
-        
-        //register cell1
-        let nib = UINib(nibName: "Cell3", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "cell3")
         
         //register cell2
         let nib2 = UINib(nibName: "Cell2", bundle: nil)
@@ -56,35 +59,19 @@ class ChiTietTKViewController: UIViewController{
 extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dictAccount.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
+        cell.lblTop?.text = dictAccount[indexPath.row].title
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3") as! Cell3
-            if let accountNo = account?.accountNo {
-                cell.lblStk.text = accountNo
-            }
-            if let balance = account?.balance, let ccy = account?.ccy {
-                cell.lblAmount.text = "\(balance) \(ccy)"
-            }
+            cell.lblTop.textColor = .orange
             
-            return cell
-        } else if indexPath.row == 1 {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataText.chuTaiKhoan
-            cell.lblBottom.text = userName
-            return cell
-        } else if indexPath.row == 2 {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") as! Cell2
-            cell.lblTop.text = DataText.chiNhanhMo
-            cell.lblBottom.text = branch
-            return cell
         }
+        cell.lblBottom.text = dictAccount[indexPath.row].label
         
-        return UITableViewCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -92,7 +79,7 @@ extension ChiTietTKViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
+        
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! HeaderChiTiet
         headerView.lblContent.text = DataHeaderTableView.accountTypeTT
         headerView.imgView.image = UIImage(named: DataHeaderTableView.imageWallet)

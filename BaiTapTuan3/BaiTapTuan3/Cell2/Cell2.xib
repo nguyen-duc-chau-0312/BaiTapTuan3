@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABm-1F-ZFp">
-                        <rect key="frame" x="10" y="10" width="172" height="21"/>
+                        <rect key="frame" x="10" y="10" width="39.5" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmX-e8-C91">
-                        <rect key="frame" x="10" y="41" width="172" height="21"/>
+                        <rect key="frame" x="10" y="41" width="41.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,9 +35,7 @@
                     <constraint firstItem="ABm-1F-ZFp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KSP-1i-XcR"/>
                     <constraint firstItem="UmX-e8-C91" firstAttribute="top" secondItem="ABm-1F-ZFp" secondAttribute="bottom" constant="10" id="O8f-bC-IgQ"/>
                     <constraint firstAttribute="bottom" secondItem="UmX-e8-C91" secondAttribute="bottom" constant="10" id="Sa1-Ua-OCL"/>
-                    <constraint firstAttribute="trailing" secondItem="ABm-1F-ZFp" secondAttribute="trailing" constant="150" id="ZLq-d4-YGm"/>
                     <constraint firstItem="UmX-e8-C91" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="f8n-WD-38N"/>
-                    <constraint firstAttribute="trailing" secondItem="UmX-e8-C91" secondAttribute="trailing" constant="150" id="pEW-Fl-jie"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

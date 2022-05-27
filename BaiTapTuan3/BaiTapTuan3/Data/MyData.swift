@@ -25,7 +25,7 @@ struct MyData {
 struct Encrypt {                
     let totalRecord: Int
     let accountBankType: String
-    var listAccount: [Account]
+    var listAccount: [AccountObj]
     var userName: String
     
     init(_ json: JSON) {
@@ -36,13 +36,14 @@ struct Encrypt {
         self.listAccount = []
         
         for item in listAcc {
-            self.listAccount.append(Account(item))
+            self.listAccount.append(AccountObj(item))
         }
     }
 }
 
 
-struct Account {                //Đặt tên struct kèm tiền tố hoặc hậu tố để biết tưởng minh vai trò của struct, ví dụ: AccountObj
+struct AccountObj {
+    //Đặt tên struct kèm tiền tố hoặc hậu tố để biết tưởng minh vai trò của struct, ví dụ: AccountObj
     let accountSource: String
     let productCode: String
     let accountMainText: String
@@ -76,6 +77,20 @@ struct Account {                //Đặt tên struct kèm tiền tố hoặc h�
     }
     //có thể tạo 1 hàm toDict convert từ obj sang dict
 }
+
+//extension Encodable {
+//    func convertToDictionary() -> [[String: Any]]? {
+//        if let data = data(using: .utf8) {
+//            do {
+//                return try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
+//        return nil
+//    }
+//    
+//}
 
 //hoặc tối ưu hơn: tạo extension:
 //extension String { //hoặc extension Encodable

@@ -11,7 +11,7 @@ class NapTienDienThoaiViewController: UIViewController {
     @IBOutlet weak var viewNapTien: ViewTienDienThoai!
     @IBOutlet weak var btnHuy: UIButton!
     @IBOutlet weak var btnTiepTuc: UIButton!
-    var account: Account?
+    var account: AccountObj?
     var sdtString = ""
     var balance = ""
     

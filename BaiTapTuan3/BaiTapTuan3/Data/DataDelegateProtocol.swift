@@ -9,8 +9,8 @@ import Foundation
 
 protocol DataDelegate {
     
-    func getDataAccount(data: [Account])
-    func dataProcess(accountArrTT: [Account], accountArrTK: [Account])
+    func getDataAccount(data: [AccountObj])
+    func dataProcess(accountArrTT: [AccountObj], accountArrTK: [AccountObj])
     func getUsername(userName: String)
 }
 

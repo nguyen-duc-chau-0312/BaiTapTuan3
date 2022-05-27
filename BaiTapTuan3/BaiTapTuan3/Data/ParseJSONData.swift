@@ -11,9 +11,9 @@ import SwiftyJSON
 class JSONData {
     
     var delegateData: DataDelegate?
-    var accountArr: [Account] = []
-    var accountArrTT: [Account] = []
-    var accountArrTK: [Account] = []
+    var accountArr: [AccountObj] = []
+    var accountArrTT: [AccountObj] = []
+    var accountArrTK: [AccountObj] = []
     var accountBankType: String = ""
     var userName: String = ""
     

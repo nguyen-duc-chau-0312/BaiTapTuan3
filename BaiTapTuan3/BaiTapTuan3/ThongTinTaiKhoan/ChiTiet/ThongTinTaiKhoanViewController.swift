@@ -14,9 +14,9 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
     @IBOutlet weak var tableViewTK: UITableView!
     
     let myData = JSONData()
-    var accountArr: [Account] = []
-    var accountArrTT: [Account] = []
-    var accountArrTK: [Account] = []
+    var accountArr: [AccountObj] = []
+    var accountArrTT: [AccountObj] = []
+    var accountArrTK: [AccountObj] = []
     var userName = ""
     
     override func viewDidLoad() {
@@ -68,14 +68,14 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
     }
     
-    func getDataAccount(data: [Account]) {
+    func getDataAccount(data: [AccountObj]) {
 
         for item in data {
             self.accountArr.append(item)
         }
     }
     
-    func dataProcess(accountArrTT: [Account], accountArrTK: [Account]) {
+    func dataProcess(accountArrTT: [AccountObj], accountArrTK: [AccountObj]) {
         for itemTT in accountArrTT {
             self.accountArrTT.append(itemTT)
         }
@@ -123,10 +123,6 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
     
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 75
-//    }
-    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -135,7 +131,7 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
         
         //if phải sử dụng toán tử ===
         //tham khảo: https://www.hackingwithswift.com/example-code/language/whats-the-difference-between-equalsequals-and-equalsequalsequals
-        if tableView == tableViewTT {
+        if tableView === tableViewTT {
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! HeaderChiTiet
             headerView.lblContent.text = DataHeaderTableView.accountTypeTT
             headerView.imgView.image = UIImage(named: DataHeaderTableView.imageWallet)
@@ -143,7 +139,7 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
             return headerView
             
         }
-        else if tableView == tableViewTK {
+        else if tableView === tableViewTK {
             let headerView = tableViewTK.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! HeaderChiTiet
             headerView.contentView.backgroundColor = .white
             headerView.imgView.image = UIImage(named: DataHeaderTableView.imagePiggyBank)
@@ -162,22 +158,14 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tableViewTT {
-//            let chitietVC = ChiTietTKViewController()
             let chitietVC = ChiTietTKViewController(nibName: "ChiTietTKViewController", bundle: nil)
             chitietVC.account = accountArrTT[indexPath.row]
             chitietVC.userName = userName
-            chitietVC.branch = accountArrTT[indexPath.row].branch
             self.navigationController?.pushViewController(chitietVC, animated: true)
         } else if tableView == tableViewTK {
             let chitietTienGuiVC = ChiTietTienGuiViewController(nibName: "ChiTietTienGuiViewController", bundle: nil)
             chitietTienGuiVC.account = accountArrTK[indexPath.row]
             chitietTienGuiVC.userName = userName
-            chitietTienGuiVC.branch = accountArrTK[indexPath.row].branch
-            chitietTienGuiVC.ccy = accountArrTK[indexPath.row].ccy
-            chitietTienGuiVC.openDate = accountArrTK[indexPath.row].openDate
-            chitietTienGuiVC.expireDate = accountArrTK[indexPath.row].expireDate
-            chitietTienGuiVC.term = accountArrTK[indexPath.row].term
-            chitietTienGuiVC.termType = accountArrTK[indexPath.row].termType
             self.navigationController?.pushViewController(chitietTienGuiVC, animated: true)
         }
     }

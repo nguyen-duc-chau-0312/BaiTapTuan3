@@ -17,7 +17,7 @@ class ManHinhChinhViewController: UIViewController, SendContactViewController, S
     
     var buttons: [UIButton?: String]?
     var iconClick = true
-    var account: Account?
+    var account: AccountObj?
     var sdt = ""
     let contactVC = ContactViewController()
     
@@ -92,6 +92,7 @@ class ManHinhChinhViewController: UIViewController, SendContactViewController, S
         napTienVC.balance = viewMenhGia.menhGia
         
         viewSDT.txtNhapSDT.text = ""
+        sdt = ""
         self.navigationController?.pushViewController(napTienVC, animated: true)
     }
     
