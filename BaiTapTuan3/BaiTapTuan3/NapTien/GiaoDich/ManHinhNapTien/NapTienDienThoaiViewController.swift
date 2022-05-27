@@ -34,6 +34,7 @@ class NapTienDienThoaiViewController: UIViewController {
         viewNapTien.lblSdtDuocNap.text = DataText.lblSdtDuocNap
         viewNapTien.lblSdt.text = sdtString
         viewNapTien.lblMenhGia.text = DataText.lblMenhGiaNap
+        viewNapTien.lblBalance.text = balance
     }
     
     @IBAction func btnTiepTuc(_ sender: UIButton) {

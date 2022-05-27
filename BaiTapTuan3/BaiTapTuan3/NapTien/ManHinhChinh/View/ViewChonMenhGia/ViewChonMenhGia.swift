@@ -17,6 +17,8 @@ class ViewChonMenhGia: UIView {
     @IBOutlet weak var btn100VND: UIButton!
     @IBOutlet weak var btn200VND: UIButton!
     @IBOutlet weak var btn500VND: UIButton!
+    var delegateSendData: SendData?
+    var menhGia = ""
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +37,14 @@ class ViewChonMenhGia: UIView {
         viewContent.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
+    func settileButton() {
+        let buttons = [btn10VND : "10.000VND", btn20VND : "20.000VND", btn50VND: "50.000VND", btn100VND : "100.000VND", btn200VND : "200.000VND", btn500VND : "500.000VND"]
+        for (key, value) in buttons {
+            key?.setTitle(value, for: .normal)
+        }
+        delegateSendData?.getButton(button: buttons)
+    }
+    
     @IBAction func onClick(_ sender: UIButton) {
         if sender == btn10VND {
             btn10VND.backgroundColor = .orange
@@ -43,6 +53,7 @@ class ViewChonMenhGia: UIView {
             btn100VND.backgroundColor = .none
             btn200VND.backgroundColor = .none
             btn500VND.backgroundColor = .none
+            menhGia = sender.title(for: .normal)!
         } else if sender == btn20VND {
             btn10VND.backgroundColor = .none
             btn20VND.backgroundColor = .orange
@@ -50,6 +61,7 @@ class ViewChonMenhGia: UIView {
             btn100VND.backgroundColor = .none
             btn200VND.backgroundColor = .none
             btn500VND.backgroundColor = .none
+            menhGia = sender.title(for: .normal)!
         } else if sender == btn50VND {
             btn10VND.backgroundColor = .none
             btn20VND.backgroundColor = .none
@@ -57,6 +69,7 @@ class ViewChonMenhGia: UIView {
             btn100VND.backgroundColor = .none
             btn200VND.backgroundColor = .none
             btn500VND.backgroundColor = .none
+            menhGia = sender.title(for: .normal)!
         } else if sender == btn100VND {
             btn10VND.backgroundColor = .none
             btn20VND.backgroundColor = .none
@@ -64,6 +77,7 @@ class ViewChonMenhGia: UIView {
             btn100VND.backgroundColor = .orange
             btn200VND.backgroundColor = .none
             btn500VND.backgroundColor = .none
+            menhGia = sender.title(for: .normal)!
         } else if sender == btn200VND {
             btn10VND.backgroundColor = .none
             btn20VND.backgroundColor = .none
@@ -71,6 +85,7 @@ class ViewChonMenhGia: UIView {
             btn100VND.backgroundColor = .none
             btn200VND.backgroundColor = .orange
             btn500VND.backgroundColor = .none
+            menhGia = sender.title(for: .normal)!
         } else if sender == btn500VND{
             btn10VND.backgroundColor = .none
             btn20VND.backgroundColor = .none
@@ -78,6 +93,7 @@ class ViewChonMenhGia: UIView {
             btn100VND.backgroundColor = .none
             btn200VND.backgroundColor = .none
             btn500VND.backgroundColor = .orange
+            menhGia = sender.title(for: .normal)!
         }
                 
     }
