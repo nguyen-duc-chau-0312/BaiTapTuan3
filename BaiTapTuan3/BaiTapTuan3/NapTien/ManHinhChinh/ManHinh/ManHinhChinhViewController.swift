@@ -7,25 +7,22 @@
 
 import UIKit
 
-class ManHinhChinhViewController: UIViewController, SendContactViewController {
-    
+class ManHinhChinhViewController: UIViewController, SendContactViewController, SendData {
+
     @IBOutlet weak var viewTaiKhoan: ViewTaiKhoanNguon!
     @IBOutlet weak var viewSDT: ViewChonSDT!
     @IBOutlet weak var viewMenhGia: ViewChonMenhGia!
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnTiepTuc: UIButton!
-    var checkIsSelected = false
+    
+    var buttons: [UIButton?: String]?
     var iconClick = true
     var account: Account?
-    var temp: [UIButton]?
-    var currentButton: [UIButton]?
-    var menhGia = ""
     var sdt = ""
     let contactVC = ContactViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Load ViewTaiKhoan
         loadViewTK()
         loadViewSDT()
         loadViewMenhGia()
@@ -41,14 +38,16 @@ class ManHinhChinhViewController: UIViewController, SendContactViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         loadViewSDT()
-        
     }
     
     func getSdt(sdt: String) {
         self.sdt = sdt
     }
     
-    
+    func getButton(button: [UIButton? : String]) {
+        self.buttons = button
+    }
+
     func loadViewTK() {
         viewTaiKhoan.lblStk.text = account?.accountNo
         viewTaiKhoan.lblBalance.text = "\((account?.balance)!) \((account?.ccy)!)"
@@ -68,68 +67,40 @@ class ManHinhChinhViewController: UIViewController, SendContactViewController {
     }
     
     func loadViewMenhGia() {
-    
-        viewMenhGia.lblChonMenhGia.text = DataText.lblMenhGia
-        viewMenhGia.btn10VND.setTitle(DataText.btn10VND, for: .normal)
-//        viewMenhGia.btn10VND.addTarget(self, action: #selector(button1press), for: .touchUpInside)
-        viewMenhGia.btn20VND.setTitle(DataText.btn20VND, for: .normal)
-        viewMenhGia.btn50VND.setTitle(DataText.btn50VND, for: .normal)
-        viewMenhGia.btn100VND.setTitle(DataText.btn100VND, for: .normal)
-        viewMenhGia.btn200VND.setTitle(DataText.btn200VND, for: .normal)
-        viewMenhGia.btn500VND.setTitle(DataText.btn500VND, for: .normal)
-        temp = [viewMenhGia.btn10VND, viewMenhGia.btn20VND, viewMenhGia.btn50VND, viewMenhGia.btn100VND, viewMenhGia.btn200VND, viewMenhGia.btn500VND]
-        if let temp1 = temp {
-            for i in temp1 {
-                viewMenhGia.onClick(i)
-                if let text = i.titleLabel?.text {
-                    menhGia = text
-                }
-//                i.addTarget(self, action: #selector(button1press), for: .touchUpInside)
-                i.backgroundColor = .none
-            }
-        }
         
-    }
-    
-    @objc func button1press(_ sender: UIButton) {
-        if let button : UIButton = sender as? UIButton
-        {
-            button.isSelected = !button.isSelected
-
-            if (button.isSelected)
-            {
-                button.backgroundColor = .orange
+        viewMenhGia.lblChonMenhGia.text = DataText.lblMenhGia
+        viewMenhGia.settileButton()
+        
+        if let tempButton = buttons {
+            for (key, value) in tempButton {
+                if let key = key {
+                    viewMenhGia.onClick(key)
+                    key.backgroundColor = .none
+                }
             }
-            else
-            {
-                button.backgroundColor = .none
-            }
-
         }
     }
-
+    
     @IBAction func CancelPressed(_ sender: UIButton) {
         viewSDT.txtNhapSDT.text = ""
     }
-
+    
     @IBAction func NextPressed(_ sender: UIButton) {
         let napTienVC = NapTienDienThoaiViewController(nibName: "NapTienDienThoaiViewController", bundle: nil)
         napTienVC.account = account
         napTienVC.sdtString = viewSDT.txtNhapSDT.text ?? ""
-        napTienVC.balance = menhGia
+        napTienVC.balance = viewMenhGia.menhGia
         
         viewSDT.txtNhapSDT.text = ""
         self.navigationController?.pushViewController(napTienVC, animated: true)
     }
     
     @objc func contactTapped(_ sender: UIButton) {
-//         contactVC = ContactViewController(nibName: "ContactViewController", bundle: nil)
-//        contactVC.delegateSend = self
         self.navigationController?.pushViewController(contactVC, animated: true)
     }
-
+    
     @objc func imageTapped(_ sender: UIButton) {
-
+        
         if iconClick {
             iconClick = false
             viewTaiKhoan.lblBalance.text = "**********"
@@ -137,8 +108,8 @@ class ManHinhChinhViewController: UIViewController, SendContactViewController {
             iconClick = true
             viewTaiKhoan.lblBalance.text = "\((account?.balance)!) \((account?.ccy)!)"
         }
-
+        
     }
- 
+    
 }
 

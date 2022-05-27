@@ -30,7 +30,7 @@ class ChiTietTienGuiViewController: UIViewController {
     var termType = ""
     
     
-     data["title":DataLabelCell.text , "label":account.property]
+//     data["title":DataLabelCell.text , "label":account.property]
     
     
     override func viewDidLoad() {

@@ -21,6 +21,7 @@
 		B4139844283B1EF200416824 /* ChiTietTienGuiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4139842283B1EF200416824 /* ChiTietTienGuiViewController.swift */; };
 		B4139845283B1EF200416824 /* ChiTietTienGuiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4139843283B1EF200416824 /* ChiTietTienGuiViewController.xib */; };
 		B483F2AF283F65E5008D77E7 /* SendContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483F2AE283F65E5008D77E7 /* SendContactViewController.swift */; };
+		B483F2B12840733D008D77E7 /* SendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B483F2B02840733D008D77E7 /* SendData.swift */; };
 		B4ADB1C1283B801800BB2B29 /* Cell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1BF283B801800BB2B29 /* Cell2.swift */; };
 		B4ADB1C2283B801800BB2B29 /* Cell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADB1C0283B801800BB2B29 /* Cell2.xib */; };
 		B4ADB1CB283C772800BB2B29 /* ManHinhChinhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ADB1C9283C772800BB2B29 /* ManHinhChinhViewController.swift */; };
@@ -77,6 +78,7 @@
 		B4139842283B1EF200416824 /* ChiTietTienGuiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietTienGuiViewController.swift; sourceTree = "<group>"; };
 		B4139843283B1EF200416824 /* ChiTietTienGuiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChiTietTienGuiViewController.xib; sourceTree = "<group>"; };
 		B483F2AE283F65E5008D77E7 /* SendContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendContactViewController.swift; sourceTree = "<group>"; };
+		B483F2B02840733D008D77E7 /* SendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendData.swift; sourceTree = "<group>"; };
 		B4ADB1BF283B801800BB2B29 /* Cell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell2.swift; sourceTree = "<group>"; };
 		B4ADB1C0283B801800BB2B29 /* Cell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell2.xib; sourceTree = "<group>"; };
 		B4ADB1C9283C772800BB2B29 /* ManHinhChinhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManHinhChinhViewController.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				B4095DC0283748C700F7AEDD /* DataHeaderTableView.swift */,
 				B4095DC828378EBF00F7AEDD /* DataText.swift */,
 				B483F2AE283F65E5008D77E7 /* SendContactViewController.swift */,
+				B483F2B02840733D008D77E7 /* SendData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				B4ADB1CB283C772800BB2B29 /* ManHinhChinhViewController.swift in Sources */,
 				B4ADB1F8283DC53F00BB2B29 /* ViewChonMenhGia.swift in Sources */,
 				B4139844283B1EF200416824 /* ChiTietTienGuiViewController.swift in Sources */,
+				B483F2B12840733D008D77E7 /* SendData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
