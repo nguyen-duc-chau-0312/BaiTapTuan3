@@ -9,4 +9,5 @@ import UIKit
 
 protocol SendData {
     func getButton(button: [UIButton?: String])
+    
 }
