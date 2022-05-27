@@ -1,2 +1,7 @@
 BaiTapTuan3/BaiTapTuan3.xcworkspace/xcuserdata/nguyenducchau.xcuserdatad/UserInterfaceState.xcuserstate
 BaiTapTuan3/BaiTapTuan3.xcworkspace/xcuserdata/nguyenducchau.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlistBaiTapTuan3/BaiTapTuan3.xcworkspace/xcuserdata/nguyenducchau.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+*.xcuserstate
+build/
+*.pbxuser
+!default.pbxuser
+*xcuserdata
