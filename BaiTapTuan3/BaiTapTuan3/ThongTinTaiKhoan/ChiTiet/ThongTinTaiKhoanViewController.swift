@@ -22,7 +22,7 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "THÔNG TIN TÀI KHOẢN"
+        title = DataText.titleThongTinTK
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.barTintColor = .orange
         

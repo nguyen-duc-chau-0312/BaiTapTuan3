@@ -24,7 +24,7 @@ class ChiTietTienGuiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "TÀI KHOẢN TIỀN GỬI"
+        title = DataText.titleTKTienGui
 
         tableView.delegate = self
         tableView.dataSource = self

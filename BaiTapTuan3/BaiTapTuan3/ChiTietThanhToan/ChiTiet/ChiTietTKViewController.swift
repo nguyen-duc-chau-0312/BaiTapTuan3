@@ -16,7 +16,7 @@ class ChiTietTKViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "TÀI KHOẢN THANH TOÁN"
+        title = DataText.titleTaiKhoanTK
                 
         tableView.delegate = self
         tableView.dataSource = self
