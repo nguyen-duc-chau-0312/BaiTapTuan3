@@ -10,13 +10,14 @@ import UIKit
 class ChiTietTKViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
+    //refactor tương tự tk tiền gửi
     var account: Account?
     var userName: String = ""
     var branch = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = DataText.titleTaiKhoanTK
+        title = "TÀI KHOẢN THANH TOÁN"
                 
         tableView.delegate = self
         tableView.dataSource = self

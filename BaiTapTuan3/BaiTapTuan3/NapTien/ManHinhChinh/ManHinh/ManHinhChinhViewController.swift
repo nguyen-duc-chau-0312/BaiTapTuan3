@@ -23,7 +23,6 @@ class ManHinhChinhViewController: UIViewController, SendContactViewController, S
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = DataText.titleNapTienDT
         loadViewTK()
         loadViewSDT()
         loadViewMenhGia()

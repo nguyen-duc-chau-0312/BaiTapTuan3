@@ -22,7 +22,7 @@ class ThongTinTaiKhoanViewController: UIViewController, DataDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = DataText.titleThongTinTK
+        title = "THÔNG TIN TÀI KHOẢN"
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.barTintColor = .orange
         
@@ -133,6 +133,8 @@ extension ThongTinTaiKhoanViewController: UITableViewDataSource, UITableViewDele
         
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        //if phải sử dụng toán tử ===
+        //tham khảo: https://www.hackingwithswift.com/example-code/language/whats-the-difference-between-equalsequals-and-equalsequalsequals
         if tableView == tableViewTT {
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! HeaderChiTiet
             headerView.lblContent.text = DataHeaderTableView.accountTypeTT

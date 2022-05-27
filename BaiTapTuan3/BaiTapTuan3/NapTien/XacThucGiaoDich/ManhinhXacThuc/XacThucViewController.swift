@@ -16,7 +16,7 @@ class XacThucViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = DataText.titleXacThuc
+
         loadViewXacThuc()
         loadViewTouchID()
     }
