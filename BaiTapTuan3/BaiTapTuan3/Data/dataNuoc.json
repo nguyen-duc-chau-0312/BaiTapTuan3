@@ -1,0 +1,349 @@
+{
+    "ListBillService":[
+       {
+          "Name":"Tiền nước & VSMT",
+          "Service":[
+             {
+                "ProCode":"01000002",                   //định danh nhà cc
+                "SerCode":"100011",                     //định danh nhà cc
+                "SerName":"Công ty nước sạch Hà Đông",  //sử dụng hiển thị trong popup nhà cc
+                "Lable":"Mã khách hàng",                //text title cho label
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"79000002",
+                "SerCode":"100011",
+                "SerName":"Cấp nước Củ Chi (SAIGON WATER)",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200071",
+                "SerName":"Cấp nước Tây Ninh",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"3",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200020",
+                "SerName":"Công ty nước sạch Hà Nội(HAWACO)",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200001",
+                "SerName":"Cấp nước Chợ Lớn - TP.HCM",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"2",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200003",
+                "SerName":"Cấp nước Gia Định - TP.HCM",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"2",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200005",
+                "SerName":"Cấp nước Tân Hòa - TP.HCM",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"2",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200004",
+                "SerName":"Cấp nước Thủ Đức - TP.HCM",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"2",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200006",
+                "SerName":"Cấp nước Trung An - TP.HCM",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200002",
+                "SerName":"Cấp nước Nhà Bè - TP.HCM",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"2",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200007",
+                "SerName":"Cấp nước Bến Thành - TP.HCM",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200011",
+                "SerName":"Cấp nước Châu Thành Bến Tre",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200010",
+                "SerName":"Cấp nước thành phố Bến Tre",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200021",
+                "SerName":"Cấp nước Đà Nẵng",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"199049",
+                "SerCode":"000010",
+                "SerName":"Cấp nước Sơn La",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200040",
+                "SerName":"Công ty CP nước sạch số 2 Hà Nội (Long Biên, Gia Lâm, Đông Anh)",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200033",
+                "SerName":"Cấp nước Cao Bằng",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200035",
+                "SerName":"Cấp nước Bắc Giang",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200029",
+                "SerName":"Cấp nước Sóc Trăng",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200023",
+                "SerName":"Cấp nước Bình Thuận",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200013",
+                "SerName":"Cấp nước Mỏ cày - Bến Tre",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200022",
+                "SerName":"Cấp nước Huế",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200030",
+                "SerName":"Cấp nước Cần Thơ",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200028",
+                "SerName":"Cấp nước Cà Mau",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200026",
+                "SerName":"Cấp nước Tiền Giang",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200034",
+                "SerName":"Cấp nước Hải Phòng",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200025",
+                "SerName":"Cấp nước Hà Tĩnh",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200027",
+                "SerName":"Cấp nước Đồng Nai",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200031",
+                "SerName":"Cấp nước Long Khánh - Đồng Nai",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200024",
+                "SerName":"Cấp nước Ninh Thuận",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200014",
+                "SerName":"Cấp nước Chợ Lách - Bến Tre",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200036",
+                "SerName":"Cấp nước Bắc Ninh",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200037",
+                "SerName":"Cấp thoát nước Bà Rịa Vũng Tàu",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"197000",
+                "SerCode":"200032",
+                "SerName":"Cấp nước Đồng Tháp",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             }
+          ]
+       }
+    ]
+ }

@@ -1,0 +1,24 @@
+{
+    "ListCity":[
+       {
+          "cityCode":"HCM",
+          "cityName":"TP. Hồ Chí Minh",
+          "cityNameEN":"Ho Chi Minh City"
+       },
+       {
+          "cityCode":"HNO",
+          "cityName":"Hà Nội",
+          "cityNameEN":"Ha Noi"
+       },
+       {
+          "cityCode":"BDI",
+          "cityName":"Bình Định",
+          "cityNameEN":"Binh Dinh"
+       },
+       {
+          "cityCode":"CTH",
+          "cityName":"Cần Thơ",
+          "cityNameEN":"Can Tho"
+       }
+    ]
+ }

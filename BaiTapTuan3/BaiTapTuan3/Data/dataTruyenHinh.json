@@ -1,0 +1,89 @@
+{
+    "ListBillService":[
+       {
+          "Name":"Cước truyền hình",
+          "Service":[
+             {
+                "ProCode":"200000",
+                "SerCode":"000002",
+                "SerName":"VTV Cab",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"200000",
+                "SerCode":"000004",
+                "SerName":"VTVcab ON",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"109800",
+                "SerCode":"000002",
+                "SerName":"Viettel",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"200100",
+                "SerCode":"000001",
+                "SerName":"AVG",
+                "Lable":"Mã đầu thu/Số thẻ",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"200200",
+                "SerCode":"000001",
+                "SerName":"Truyền hình K+",
+                "Lable":"Mã đầu thu/Số thẻ",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"200300",
+                "SerCode":"000002",
+                "SerName":"HTVC",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"00000001",
+                "SerCode":"100013",
+                "SerName":"FPT Play",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"0",
+                "PaymentType":"1",
+                "ChargeFee":"0"
+             },
+             {
+                "ProCode":"200400",
+                "SerCode":"600012",
+                "SerName":"VED",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"4",
+                "ChargeFee":"0"
+             }
+          ]
+       }
+    ]
+ }

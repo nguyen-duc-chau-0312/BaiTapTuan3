@@ -1,0 +1,54 @@
+{
+    "ListDistrict":[
+       {
+          "districtCode":"QDD",
+          "districtName":"Đống Đa",
+          "districtNameEN":"Dong Da"
+       },
+       {
+          "districtCode":"QHBT",
+          "districtName":"Hai Bà Trưng",
+          "districtNameEN":"Hai Ba Trung"
+       },
+       {
+          "districtCode":"QNTL",
+          "districtName":"Nam Từ Liêm",
+          "districtNameEN":"Nam Tu Liem"
+       },
+       {
+          "districtCode":"QHM",
+          "districtName":"Hoàng Mai",
+          "districtNameEN":"Hoang Mai"
+       },
+       {
+          "districtCode":"QBTL",
+          "districtName":"Bắc Từ Liêm",
+          "districtNameEN":"Bac Tu Liem"
+       },
+       {
+          "districtCode":"QTX",
+          "districtName":"Thanh Xuân",
+          "districtNameEN":"Thanh Xuan"
+       },
+       {
+          "districtCode":"QLB",
+          "districtName":"Long Biên",
+          "districtNameEN":"Long Bien"
+       },
+       {
+          "districtCode":"QTH",
+          "districtName":"Tây Hồ",
+          "districtNameEN":"Tay Ho"
+       },
+       {
+          "districtCode":"QCG",
+          "districtName":"Cầu Giấy",
+          "districtNameEN":"Cau Giay"
+       },
+       {
+          "districtCode":"GLA",
+          "districtName":"Gia Lâm",
+          "districtNameEN":"Gia Lam"
+       }
+    ]
+ }

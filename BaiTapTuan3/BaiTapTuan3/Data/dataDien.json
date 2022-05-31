@@ -1,0 +1,32 @@
+
+{
+    "Des":"Thành công",
+    "Version":"30",
+    "ListBillService":[
+        {
+            "Name":"Tiền điện",
+            "Service":[
+            {
+                "ProCode":"196000",
+                "SerCode":"000001",
+                "SerName":"Điện lực",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"2",
+                "ChargeFee":"0"
+            },
+            {
+                "ProCode":"196000",
+                "SerCode":"000002",
+                "SerName":"Thanh toán tiền điện qua ECPAY",
+                "Lable":"Mã khách hàng",
+                "InputType":"0",
+                "SwitchType":"1",
+                "PaymentType":"2",
+                "ChargeFee":"0"
+            }
+            ]
+        }
+    ]
+}
