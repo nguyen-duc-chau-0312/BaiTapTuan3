@@ -1,0 +1,36 @@
+{
+    "ListBuilding":[
+       {
+          "buildingID":"344",
+          "buildingName":"Thăng Long N01",
+          "buildingNameEN":"Thang Long N01",
+          "Provider":"CYHOME",
+          "ProCode":"196005",
+          "SerCode":"200001"
+       },
+       {
+          "buildingID":"37",
+          "buildingName":"Hateco Apollo",
+          "buildingNameEN":"Hateco Apollo",
+          "Provider":"CYHOME",
+          "ProCode":"196005",
+          "SerCode":"200001"
+       },
+       {
+          "buildingID":"44",
+          "buildingName":"Ecolife Capitol",
+          "buildingNameEN":"Ecolife Capitol",
+          "Provider":"CYHOME",
+          "ProCode":"196005",
+          "SerCode":"200001"
+       },
+       {
+          "buildingID":"46",
+          "buildingName":"Mỹ Đình Pearl",
+          "buildingNameEN":"My Dinh Pearl",
+          "Provider":"CYHOME",
+          "ProCode":"196005",
+          "SerCode":"200001"
+       }
+    ]
+ }

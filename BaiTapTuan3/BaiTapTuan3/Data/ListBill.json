@@ -1,0 +1,49 @@
+ 
+ {
+    "Des":"Thành công",
+    "Version":"30",
+    "ListBillPayment":[
+        {
+            "Lable":"Loại dịch vụ",                             //sử dụng cho màn hình khởi tạo
+            "ID":"11",                                          //id dịch vụ
+            "Name":"Nạp tiền giao thông",                       //sử dụng cho title màn hình khởi tạo
+            "Img":"https://mobile.vnpay.vn/VBA/icon_services/ic_48px_VETC@3x.png", //thay lại bằng ảnh local
+            "Type":"0"                                          //sử dụng điều hướng loại màn hình khởi tạo
+        },
+       {
+          "Lable":"Loại dịch vụ",
+          "ID":"1",
+          "Name":"Nạp tiền chứng khoán",
+          "Img":"ic48PxNaptienchungkhoan",
+          "Type":"1"
+       },
+       {
+          "Lable":"Nhà cung cấp dịch vụ",
+          "ID":"2",
+          "Name":"Tiền điện",
+          "Img":"ic48PxDien",
+          "Type":"0"
+       },
+       {
+          "Lable":"Nhà cung cấp dịch vụ",
+          "ID":"3",
+          "Name":"Tiền nước & VSMT",
+          "Img":"ic48PxNuoc",
+          "Type":"0"
+       },
+       {
+          "Lable":"Nhà cung cấp dịch vụ",
+          "ID":"7",
+          "Name":"Cước truyền hình",
+          "Img":"ic48PxTruyenhinh",
+          "Type":"0"
+       },
+       {
+          "Lable":"Nhà cung cấp",
+          "ID":"16",
+          "Name":"Phí chung cư",
+          "Img":"ic_48px_phichungcu",
+          "Type":"5"
+       }
+    ]
+ }

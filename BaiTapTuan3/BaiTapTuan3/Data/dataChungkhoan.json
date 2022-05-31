@@ -1,0 +1,24 @@
+{
+    "ListBillService":[
+       {
+          "Name":"Nạp tiền chứng khoán",
+          "Provider":[
+             {
+                "ProCode":"192000",
+                "ProName":"Stock",
+                "Service":[
+                   {
+                      "SerCode":"500010",
+                      "SerName":"Công ty Cổ phần Chứng khoán Agribank - Agriseco",
+                      "InputType":"0",
+                      "Lable":"Số tài khoản chứng khoán",
+                      "SwitchType":"0",
+                      "PaymentType":"4",
+                      "ChargeFee":"1"
+                   }
+                ]
+             }
+          ]
+       }
+    ]
+ }
