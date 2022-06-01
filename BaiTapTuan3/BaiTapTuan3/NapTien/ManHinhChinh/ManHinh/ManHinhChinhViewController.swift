@@ -69,16 +69,16 @@ class ManHinhChinhViewController: UIViewController, SendContactViewController, S
     func loadViewMenhGia() {
         
         viewMenhGia.lblChonMenhGia.text = DataText.lblMenhGia
-        viewMenhGia.settileButton()
+//        viewMenhGia.settileButton()
         
-        if let tempButton = buttons {
-            for (key, value) in tempButton {
-                if let key = key {
-                    viewMenhGia.onClick(key)
-                    key.backgroundColor = .none
-                }
-            }
-        }
+//        if let tempButton = buttons {
+//            for (key, value) in tempButton {
+//                if let key = key {
+//                    viewMenhGia.onClick(key)
+//                    key.backgroundColor = .none
+//                }
+//            }
+//        }
     }
     
     @IBAction func CancelPressed(_ sender: UIButton) {
