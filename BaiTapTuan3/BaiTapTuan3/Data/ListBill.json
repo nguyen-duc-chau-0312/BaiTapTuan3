@@ -4,11 +4,11 @@
     "Version":"30",
     "ListBillPayment":[
         {
-            "Lable":"Loại dịch vụ",                             //sử dụng cho màn hình khởi tạo
-            "ID":"11",                                          //id dịch vụ
-            "Name":"Nạp tiền giao thông",                       //sử dụng cho title màn hình khởi tạo
-            "Img":"https://mobile.vnpay.vn/VBA/icon_services/ic_48px_VETC@3x.png", //thay lại bằng ảnh local
-            "Type":"0"                                          //sử dụng điều hướng loại màn hình khởi tạo
+            "Lable":"Loại dịch vụ",
+            "ID":"11",
+            "Name":"Nạp tiền giao thông",
+            "Img":"ic48PxVetc",
+            "Type":"0"                            
         },
        {
           "Lable":"Loại dịch vụ",

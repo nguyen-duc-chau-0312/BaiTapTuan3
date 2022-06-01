@@ -8,12 +8,18 @@
 import Foundation
 import SwiftyJSON
 
+protocol BillPaymentImpl{
+    func getDataBill(data: [BillPayment])
+}
+
 class JSONData {
     
     var delegateData: DataDelegate?
+    var delegateBill: BillPaymentImpl?
     var accountArr: [AccountObj] = []
     var accountArrTT: [AccountObj] = []
     var accountArrTK: [AccountObj] = []
+    var listBill: [BillPayment] = []
     var accountBankType: String = ""
     var userName: String = ""
     
@@ -39,6 +45,27 @@ class JSONData {
         }
         
         delegateData?.getDataAccount(data: accountArr)
+    }
+    
+    func getDataListBill() {
+        if let path = Bundle.main.path(forResource: "ListBill", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let bill = Billobj(JSON(rawValue: jsonResult) ?? "")
+                print("Gia tri: \(bill.des)")
+                let temp = bill.listBill
+
+                for item in temp {
+                    self.listBill.append(item)
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateBill?.getDataBill(data: listBill)
     }
     
     func dataParseProcess() {

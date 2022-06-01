@@ -37,7 +37,7 @@ class ChiTietTKViewController: UIViewController{
         let nibHeader = UINib(nibName: "HeaderChiTiet", bundle: nil)
         self.tableView.register(nibHeader, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Nạp thẻ", style: .plain, target: self, action: #selector(addTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(addTapped))
         
     }
     
@@ -49,9 +49,9 @@ class ChiTietTKViewController: UIViewController{
     }
     
     @objc func addTapped() {
-        let manHinhVC = ManHinhChinhViewController(nibName: "ManHinhChinhViewController", bundle: nil)
-        manHinhVC.account = account
-        self.navigationController?.pushViewController(manHinhVC, animated: true)
+        let dichvuVC = DichVuViewController(nibName: "DichVuViewController", bundle: nil)
+        dichvuVC.account = account
+        self.navigationController?.pushViewController(dichvuVC, animated: true)
     }
     
 }
