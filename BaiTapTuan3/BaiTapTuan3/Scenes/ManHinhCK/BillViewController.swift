@@ -21,9 +21,9 @@ class BillViewController: UIViewController {
         // stackView.addSubview(uiview)
         //        stackView.addArrangedSubview(uiview)
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let viewType0 = ViewType0()
         self.view.addSubview(viewType0)
         viewType0.heightAnchor.constraint(equalToConstant: viewType0.frame.height).isActive = true
@@ -52,9 +52,7 @@ class BillViewController: UIViewController {
         stackView.setNeedsLayout()
         stackView.layoutIfNeeded()
         stackView.insertArrangedSubview(viewType1, at: 1)
-
     }
-    
-    
+
 }
 

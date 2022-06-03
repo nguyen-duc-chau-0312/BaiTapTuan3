@@ -49,7 +49,7 @@ class ChiTietTKViewController: UIViewController{
     }
     
     @objc func addTapped() {
-        let dichvuVC = DichVuViewController(nibName: "DichVuViewController", bundle: nil)
+        let dichvuVC = DichVuConfigurator.viewcontroller()
         dichvuVC.account = account
         self.navigationController?.pushViewController(dichvuVC, animated: true)
     }

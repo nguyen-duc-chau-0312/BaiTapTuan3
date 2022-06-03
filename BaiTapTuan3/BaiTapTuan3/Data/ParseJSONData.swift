@@ -61,7 +61,7 @@ class JSONData {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 let bill = Billobj(JSON(rawValue: jsonResult) ?? "")
-                print("Gia tri: \(bill.des)")
+//                print("Gia tri: \(bill.des)")
                 let temp = bill.listBill
 
                 for item in temp {

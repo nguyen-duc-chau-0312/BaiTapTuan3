@@ -2,51 +2,65 @@
 //  DichVuViewController.swift
 //  BaiTapTuan3
 //
-//  Created by Nguyen Duc Chau on 31/05/2022.
+//  Created Nguyen Duc Chau on 03/06/2022.
+//  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
+//
 //
 
 import UIKit
 
-class DichVuViewController: UIViewController, BillPaymentImpl {
+// MARK: Presenter Interface
+protocol DichVuPresentationLogic: class {
+    func showListCellBill(listCellBill: [CellBill])
+}
 
+// MARK: View
+final class DichVuViewController: UIViewController {
+    
+    var interactor: DichVuInteractorLogic!
+    var router: DichVuRoutingLogic!
+
+    // MARK: IBOutlet
     @IBOutlet weak var collectionView: UICollectionView!
-    let myData = JSONData()
-    var listBill: [BillPayment] = []
+    var listBill: [BillPayment]?
     var account: AccountObj?
     var listCell: [CellBill] = []
+    let myData = JSONData()
     
+    // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupView()
+        fetchDataOnLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        myData.delegateBill = self
         myData.getDataListBill()
-        myData.getDataListTruyenHinhSerivce()
-        print(listBill)
-        for item in listBill {
-            listCell.append(CellBill(label: item.name, img: item.img, type: item.type))
-        }
-        
+    }
+    
+    // MARK: Fetch DichVu
+    private func fetchDataOnLoad() {
+        // NOTE: Ask the Interactor to do some work
+        interactor.fetchDataListBill(data: "")
+    }
+    
+    // MARK: SetupUI
+    private func setupView() {
         let nib = UINib(nibName: "DichVuCollectionViewCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "Cell")
-        
     }
     
-    func getDataBill(data: [BillPayment]) {
-        for item in data {
-            self.listBill.append(item)
-        }
-    }
-    
-    func initCollectionView(){
-        
-        
+    // MARK: IBAction
+}
+
+// MARK: Connect View, Interactor, and Presenter
+extension DichVuViewController: DichVuPresentationLogic {
+    func showListCellBill(listCellBill: [CellBill]) {
+        listCell = listCellBill
     }
     
 }
 
-extension DichVuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension DichVuViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listCell.count
@@ -54,13 +68,15 @@ extension DichVuViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! DichVuCollectionViewCell
-        let listCell = listCell[indexPath.row]
-        cell.lblContent.text = listCell.label
-        cell.imgView.image = UIImage(named: listCell.img)
-        cell.setupData()
+//        cell.lblContent.text = listCell.label
+//        cell.imgView.image = UIImage(named: listCell.img)
+        let temp = listCell[indexPath.row]
+        cell.setupData(temp)
         return cell
     }
-    
+}
+
+extension DichVuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cellRow = listCell[indexPath.row]
         if cellRow.type == "0" {
@@ -73,7 +89,7 @@ extension DichVuViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 }
 
-extension DichVuViewController:UICollectionViewDelegateFlowLayout{
+extension DichVuViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print(collectionView.frame.size.width)
         let screenWidth = UIScreen.main.bounds.width - 60
@@ -88,29 +104,3 @@ extension DichVuViewController:UICollectionViewDelegateFlowLayout{
         return 10
     }
 }
-//for (int i=0; i<btnList.count; i++) {
-//        NSString *btnName=[[btnList objectAtIndex:i] valueForKey:@"Ccy"];
-//        NSInteger funTag=[[[btnList objectAtIndex:i] valueForKey:@"Denom"] integerValue];
-//        UIButton *btn=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, btnWidth -3 , 48)];
-//        [btn setTitle:btnName forState:UIControlStateNormal];
-//        [btn setTag:funTag];
-//        if(screenWidth > 350){
-//            btn.titleLabel.font = [UIFont systemFontOfSize:14];
-//        }else{
-//            btn.titleLabel.font = [UIFont systemFontOfSize:12];
-//        }
-//        
-//        [btn setTitleColor:kTextfieldColor forState:UIControlStateNormal];
-//        [btn setTitleColor:UIColor.whiteColor forState:UIControlStateSelected];
-//        btn.layer.cornerRadius=kRadius;
-//        [btn setBackgroundColor:[UIColor whiteColor]];
-//        [btn setClipsToBounds:YES];
-//        btn.layer.borderColor = [UIColor colorWithHex:@"#BCC1C6"].CGColor;
-//        btn.layer.borderWidth = 1;
-//        xCenter=btnWidth/2+(i%3)*(btnWidth + 2);
-//        yCenter=50/2+floor(i/3)*55;
-//        [btn setCenter:CGPointMake(xCenter, yCenter)];
-//        [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-//        [view addSubview:btn];
-//        
-//    }

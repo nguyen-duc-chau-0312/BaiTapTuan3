@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         
-        let viewController = DichVuViewController()
+        let viewController = ThongTinTaiKhoanViewController()
+//        let viewController = DichVuConfigurator.viewcontroller()
         let navViewController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navViewController
     }

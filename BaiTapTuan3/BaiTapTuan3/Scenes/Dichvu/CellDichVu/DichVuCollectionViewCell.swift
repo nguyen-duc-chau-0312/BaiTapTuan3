@@ -20,10 +20,9 @@ class DichVuCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setupData(){
-       
-//        lblContent.text = ..
-        
+    func setupData(_ cell: CellBill){
+        lblContent.text = cell.label
+        imgView.image = UIImage(named: cell.img)
     }
     
     private func configView() {
