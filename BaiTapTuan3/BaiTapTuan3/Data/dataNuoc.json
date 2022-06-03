@@ -4,10 +4,10 @@
           "Name":"Tiền nước & VSMT",
           "Service":[
              {
-                "ProCode":"01000002",                   //định danh nhà cc
-                "SerCode":"100011",                     //định danh nhà cc
-                "SerName":"Công ty nước sạch Hà Đông",  //sử dụng hiển thị trong popup nhà cc
-                "Lable":"Mã khách hàng",                //text title cho label
+                "ProCode":"01000002",
+                "SerCode":"100011",
+                "SerName":"Công ty nước sạch Hà Đông",
+                "Lable":"Mã khách hàng",          
                 "InputType":"0",
                 "SwitchType":"0",
                 "PaymentType":"1",

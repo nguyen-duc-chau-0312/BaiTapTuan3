@@ -8,14 +8,22 @@
 import Foundation
 import SwiftyJSON
 
-protocol BillPaymentImpl{
-    func getDataBill(data: [BillPayment])
-}
-
 class JSONData {
     
     var delegateData: DataDelegate?
     var delegateBill: BillPaymentImpl?
+    var delegateChungCuBuild: ChungCuBuildingImpl?
+    var delegateChungCuCity: ChungCuCityImpl?
+    var delegateChungCuDistrict: ChungCuDistrictImpl?
+    var delegateTruyenHinh: TruyenHinhServiceImpl?
+    var delegateDien: DienServiceImpl?
+    var delegateNuoc: NuocServiceImpl?
+    var listNuocService: [ServiceNuocObj] = []
+    var listTruyenHinhService: [ServiceTruyenHinhObj] = []
+    var listDienService: [ServiceObj] = []
+    var listDistrict: [DistrictObj] = []
+    var listChungCuCity: [CityObj] = []
+    var listChungCuBuild: [BuildingObj] = []
     var accountArr: [AccountObj] = []
     var accountArrTT: [AccountObj] = []
     var accountArrTK: [AccountObj] = []
@@ -67,6 +75,133 @@ class JSONData {
         }
         delegateBill?.getDataBill(data: listBill)
     }
+    
+    func getDataListChungCuBuilding() {
+        if let path = Bundle.main.path(forResource: "chungCuBuilding", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let chungcu = ChungCuBuilding(JSON(rawValue: jsonResult) ?? "")
+                let temp = chungcu.listBuilding
+
+                for item in temp {
+                    self.listChungCuBuild.append(item)
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateChungCuBuild?.getDataChungCuBuild(data: listChungCuBuild)
+    }
+    
+    func getDataListChungCuCity() {
+        if let path = Bundle.main.path(forResource: "chungCuCity", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let chungcu = ChungCuCity(JSON(rawValue: jsonResult) ?? "")
+                let temp = chungcu.listChungCu
+
+                for item in temp {
+                    self.listChungCuCity.append(item)
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateChungCuCity?.getDataChungCuCity(data: listChungCuCity)
+    }
+    
+    func getDataListChungCuDistrict() {
+        if let path = Bundle.main.path(forResource: "chungCuDistrict", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let chungcu = ChungCuDistrict(JSON(rawValue: jsonResult) ?? "")
+                let temp = chungcu.listDistrict
+
+                for item in temp {
+                    self.listDistrict.append(item)
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateChungCuDistrict?.getDataChungCuDistrict(data: listDistrict)
+    }
+    
+    func getDataListDienSerivce() {
+        if let path = Bundle.main.path(forResource: "dataDien", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let dien = DienObj(JSON(rawValue: jsonResult) ?? "")
+                let temp = dien.listBillService
+
+                for item in temp {
+                    for i in item.listService {
+                        self.listDienService.append(i)
+                    }
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateDien?.getDataServiceObj(data: listDienService)
+    }
+    
+    func getDataListNuocSerivce() {
+        if let path = Bundle.main.path(forResource: "dataNuoc", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let nuoc = NuocObj(JSON(rawValue: jsonResult) ?? "")
+                let temp = nuoc.listBillService
+
+                for item in temp {
+                    for i in item.listService {
+                        self.listNuocService.append(i)
+                    }
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateNuoc?.getDataNuocService(data: listNuocService)
+    }
+    
+    func getDataListTruyenHinhSerivce() {
+        if let path = Bundle.main.path(forResource: "dataTruyenHinh", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let truyenHinh = TruyenHinh(JSON(rawValue: jsonResult) ?? "")
+                let temp = truyenHinh.listBillService
+
+                for item in temp {
+                    for i in item.listService {
+                        self.listTruyenHinhService.append(i)
+                    }
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateTruyenHinh?.getDataNuocService(data: listTruyenHinhService)
+    }
+    
     
     func dataParseProcess() {
         for account in accountArr {
