@@ -10,6 +10,11 @@ import UIKit
 class ViewTop: UIView {
 
     @IBOutlet var viewContent: UIView!
+    @IBOutlet weak var lblTKnguon: UILabel!
+    @IBOutlet weak var lblStk: UILabel!
+    @IBOutlet weak var lblSodu: UILabel!
+    @IBOutlet weak var lblBalance: UILabel!
+    @IBOutlet weak var btnEye: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,5 +32,8 @@ class ViewTop: UIView {
         viewContent.frame = self.bounds
         viewContent.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
-
+    @IBAction func clickEye(_ sender: UIButton) {
+        btnEye.isSelected = !btnEye.isSelected
+    }
+    
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewType1: UIView {
+class ViewType5: UIView {
 
     @IBOutlet var viewContent: UIView!
     @IBOutlet weak var btnToggle: UIButton!
@@ -28,14 +28,14 @@ class ViewType1: UIView {
     }
     
     private func commomInit(){
-        Bundle.main.loadNibNamed("ViewType1", owner: self, options: nil)
+        Bundle.main.loadNibNamed("ViewType5", owner: self, options: nil)
         addSubview(viewContent)
         viewContent.frame = self.bounds
         viewContent.backgroundColor = .blue
         viewContent.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     private func commomXib(){
-        Bundle.main.loadNibNamed("ViewType1", owner: self, options: nil)
+        Bundle.main.loadNibNamed("ViewType5", owner: self, options: nil)
         self.frame = viewContent.frame
         addSubview(viewContent)
         viewContent.autoresizingMask = [.flexibleHeight, .flexibleWidth]

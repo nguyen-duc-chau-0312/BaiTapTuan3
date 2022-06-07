@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewTop" customModule="BaiTapTuan3" customModuleProvider="target">
             <connections>
+                <outlet property="btnEye" destination="zBV-7f-YrS" id="U0S-ca-oZO"/>
+                <outlet property="lblBalance" destination="Hx3-0n-BS8" id="HIh-cQ-uZk"/>
+                <outlet property="lblSodu" destination="GF6-Gz-xpr" id="Jyj-LP-sJj"/>
+                <outlet property="lblStk" destination="kiO-0R-GnR" id="Ktw-OR-X35"/>
+                <outlet property="lblTKnguon" destination="Kzx-gV-NxK" id="L6s-kQ-7XA"/>
                 <outlet property="viewContent" destination="iN0-l3-epB" id="e1I-kg-XA4"/>
             </connections>
         </placeholder>
@@ -65,6 +70,9 @@
                     </constraints>
                     <state key="normal" title="Button" image="eye"/>
                     <state key="selected" image="ic24PxEye"/>
+                    <connections>
+                        <action selector="clickEye:" destination="-1" eventType="touchUpInside" id="s95-j4-bal"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx3-0n-BS8">
                     <rect key="frame" x="342" y="107" width="42" height="21"/>
