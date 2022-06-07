@@ -29,4 +29,6 @@ struct DataText {
     static let lblTextMaXacThuc = "Vui lòng nhập Mật khẩu đăng nhập ứng dụng để xác thực giao dịch"
     static let lblText1 = "Quý khách có thể chạm vào đây"
     static let lblText2 = "để xác nhận giao dịch bằng vân tay"
+    static let lblTitleHoaDon = "Thông tin hoá đơn"
+    static let lblLuuThongTin = "Lưu thông tin hoá đơn"
 }

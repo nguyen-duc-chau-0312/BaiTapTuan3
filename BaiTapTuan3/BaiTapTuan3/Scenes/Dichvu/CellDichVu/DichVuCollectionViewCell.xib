@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBi-w4-l2q">
-                        <rect key="frame" x="2" y="60" width="95" height="45"/>
+                        <rect key="frame" x="2" y="60" width="95" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,12 +33,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="wBi-w4-l2q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="IIj-W5-E8U"/>
-                <constraint firstAttribute="trailing" secondItem="wBi-w4-l2q" secondAttribute="trailing" constant="2" id="JbU-KM-ZTL"/>
                 <constraint firstItem="Ved-FR-h55" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Lt7-JM-pKr"/>
-                <constraint firstItem="wBi-w4-l2q" firstAttribute="top" secondItem="Ved-FR-h55" secondAttribute="bottom" id="N9U-0t-yX3"/>
+                <constraint firstItem="wBi-w4-l2q" firstAttribute="top" secondItem="Ved-FR-h55" secondAttribute="bottom" id="MVd-Lc-OMp"/>
+                <constraint firstItem="wBi-w4-l2q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="MrP-W6-9Eb"/>
+                <constraint firstItem="wBi-w4-l2q" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ZIm-xW-SyR"/>
+                <constraint firstAttribute="trailing" secondItem="wBi-w4-l2q" secondAttribute="trailing" constant="2" id="gxS-2C-7ed"/>
                 <constraint firstItem="Ved-FR-h55" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="pta-pv-4ia"/>
-                <constraint firstAttribute="bottom" secondItem="wBi-w4-l2q" secondAttribute="bottom" id="wUS-Gb-SqA"/>
             </constraints>
             <size key="customSize" width="99" height="85"/>
             <connections>

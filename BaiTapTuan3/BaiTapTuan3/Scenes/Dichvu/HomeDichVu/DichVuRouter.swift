@@ -10,7 +10,7 @@
 import UIKit
 
 protocol DichVuRoutingLogic: AnyObject {
-    func show(_ dataCell: CellBill)
+    func show(_ dataCell: BillPayment)
 }
 
 final class DichVuRouter {
@@ -20,8 +20,8 @@ final class DichVuRouter {
 extension DichVuRouter: DichVuRoutingLogic {
     
     //Show man hinh tuong ung voi type
-    func show(_ dataCell: CellBill) {
-        let items: [CellBill] = [dataCell]
+    func show(_ dataCell: BillPayment) {
+        let items: [BillPayment] = [dataCell]
         
 //        popupController.show()
     }

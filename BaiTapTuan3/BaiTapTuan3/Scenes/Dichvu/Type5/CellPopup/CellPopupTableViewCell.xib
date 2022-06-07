@@ -16,24 +16,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="328" height="58"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afo-kn-Xdu">
+                        <rect key="frame" x="14" y="14" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="6Eo-Uq-gEh"/>
+                            <constraint firstAttribute="width" constant="25" id="v6J-bw-g4l"/>
+                        </constraints>
+                        <state key="normal" image="checkbox"/>
+                        <state key="selected" image="correct"/>
+                        <connections>
+                            <action selector="checkBoxClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Vp-Bc-lNz"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va1-pn-di9">
-                        <rect key="frame" x="0.0" y="10" width="328" height="21"/>
+                        <rect key="frame" x="49" y="16" width="41.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="va1-pn-di9" secondAttribute="trailing" id="EsZ-Qd-wIk"/>
-                    <constraint firstItem="va1-pn-di9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NgP-nq-ZH0"/>
-                    <constraint firstItem="va1-pn-di9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WqM-9C-gNf"/>
+                    <constraint firstItem="afo-kn-Xdu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Ci5-vf-jbV"/>
+                    <constraint firstItem="va1-pn-di9" firstAttribute="leading" secondItem="afo-kn-Xdu" secondAttribute="trailing" constant="10" id="VyD-q8-al2"/>
+                    <constraint firstItem="afo-kn-Xdu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="fd3-ei-5Rb"/>
+                    <constraint firstItem="va1-pn-di9" firstAttribute="centerY" secondItem="afo-kn-Xdu" secondAttribute="centerY" id="vqP-fb-KNn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="lblText" destination="va1-pn-di9" id="5tL-c7-Pn1"/>
+                <outlet property="btnCheckbox" destination="afo-kn-Xdu" id="dqc-Up-4lk"/>
+                <outlet property="lblText" destination="va1-pn-di9" id="NiC-8q-NJy"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="65.625"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checkbox" width="24" height="24"/>
+        <image name="correct" width="512" height="512"/>
+    </resources>
 </document>

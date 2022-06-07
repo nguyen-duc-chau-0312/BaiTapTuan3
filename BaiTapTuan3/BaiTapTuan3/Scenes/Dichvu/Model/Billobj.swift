@@ -30,6 +30,12 @@ struct Billobj {
     }
 }
 
+//enum BillType{
+//    case 0
+//    case 1
+//    case 2
+//}
+
 struct BillPayment {
     let lable: String
     let id: String
@@ -46,8 +52,3 @@ struct BillPayment {
     }
 }
 
-struct CellBill {
-    var label: String
-    var img: String
-    var type: String
-}

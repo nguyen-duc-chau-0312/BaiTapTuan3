@@ -7,6 +7,8 @@
 //
 //
 
+//Danh cho Tien dien, Tien nuoc ... Bill.type = 0
+
 import UIKit
 
 final class BillType0Configurator {

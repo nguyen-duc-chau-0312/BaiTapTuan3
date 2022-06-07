@@ -15,7 +15,7 @@ protocol BillType0PresentationLogic: AnyObject {
 }
 
 // MARK: View
-final class BillType0ViewController: BaseViewController {
+final class BillType0ViewController: UIViewController {
     var interactor: BillType0InteractorLogic!
     var router: BillType0RoutingLogic!
     

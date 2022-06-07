@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupDistrictViewController" customModule="FinalTest" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupDistrictViewController" customModule="BaiTapTuan3" customModuleProvider="target">
             <connections>
+                <outlet property="btnCancel" destination="hRz-f4-1qb" id="7td-Li-gcQ"/>
+                <outlet property="lblTitle" destination="Tnf-Rx-7Cg" id="ZCA-vM-v3L"/>
+                <outlet property="mySearchText" destination="T4w-qe-J5k" id="vtc-dC-fqZ"/>
+                <outlet property="tableView" destination="aXI-cq-R3I" id="fEI-i8-Pwc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +21,80 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRi-io-RFn">
+                    <rect key="frame" x="20" y="50" width="335" height="417"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-p6-qJS">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnf-Rx-7Cg">
+                                    <rect key="frame" x="146.5" y="19.5" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRz-f4-1qb">
+                                    <rect key="frame" x="295" y="13.5" width="30" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="X">
+                                        <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelPressed:" destination="-1" eventType="touchUpInside" id="dRH-4J-Qah"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Cc9-sG-tMo"/>
+                                <constraint firstItem="hRz-f4-1qb" firstAttribute="centerY" secondItem="Tnf-Rx-7Cg" secondAttribute="centerY" id="NVy-xR-RcL"/>
+                                <constraint firstAttribute="trailing" secondItem="hRz-f4-1qb" secondAttribute="trailing" constant="10" id="Tob-Th-6m4"/>
+                                <constraint firstItem="Tnf-Rx-7Cg" firstAttribute="centerX" secondItem="1bx-p6-qJS" secondAttribute="centerX" id="qfU-wp-jRJ"/>
+                                <constraint firstItem="Tnf-Rx-7Cg" firstAttribute="centerY" secondItem="1bx-p6-qJS" secondAttribute="centerY" id="yOR-qm-N17"/>
+                            </constraints>
+                        </view>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="T4w-qe-J5k">
+                            <rect key="frame" x="0.0" y="60" width="335" height="51"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aXI-cq-R3I">
+                            <rect key="frame" x="0.0" y="111" width="335" height="306"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="1bx-p6-qJS" firstAttribute="leading" secondItem="SRi-io-RFn" secondAttribute="leading" id="8PK-4o-85X"/>
+                        <constraint firstItem="aXI-cq-R3I" firstAttribute="leading" secondItem="SRi-io-RFn" secondAttribute="leading" id="9Ir-3N-zJp"/>
+                        <constraint firstAttribute="trailing" secondItem="1bx-p6-qJS" secondAttribute="trailing" id="Cl0-fE-NBS"/>
+                        <constraint firstItem="T4w-qe-J5k" firstAttribute="leading" secondItem="SRi-io-RFn" secondAttribute="leading" id="Syv-Q6-Wqk"/>
+                        <constraint firstAttribute="trailing" secondItem="aXI-cq-R3I" secondAttribute="trailing" id="d7X-rq-H2e"/>
+                        <constraint firstAttribute="bottom" secondItem="aXI-cq-R3I" secondAttribute="bottom" id="jN8-DD-52G"/>
+                        <constraint firstItem="1bx-p6-qJS" firstAttribute="top" secondItem="SRi-io-RFn" secondAttribute="top" id="jvS-fs-YQw"/>
+                        <constraint firstItem="aXI-cq-R3I" firstAttribute="top" secondItem="T4w-qe-J5k" secondAttribute="bottom" id="tZM-YI-oLd"/>
+                        <constraint firstAttribute="trailing" secondItem="T4w-qe-J5k" secondAttribute="trailing" id="tkq-TC-jZL"/>
+                        <constraint firstItem="T4w-qe-J5k" firstAttribute="top" secondItem="1bx-p6-qJS" secondAttribute="bottom" id="y2k-ZR-3GN"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.7993617784" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SRi-io-RFn" secondAttribute="bottom" constant="200" id="Evy-g9-zcy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SRi-io-RFn" secondAttribute="trailing" constant="20" id="Hcd-Vn-ccI"/>
+                <constraint firstItem="SRi-io-RFn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Kwf-gG-yYb"/>
+                <constraint firstItem="SRi-io-RFn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="w7U-aA-B9e"/>
+            </constraints>
+            <point key="canvasLocation" x="130" y="33"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

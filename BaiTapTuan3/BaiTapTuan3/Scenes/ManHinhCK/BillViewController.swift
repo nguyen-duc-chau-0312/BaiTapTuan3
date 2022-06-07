@@ -13,6 +13,7 @@ class BillViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     var account: AccountObj?
     var type = ""
+    var billPayment: BillPayment?
     // @IBOutlet weak var viewBottom: UIView!
     
     
@@ -20,6 +21,10 @@ class BillViewController: UIViewController {
         super.viewDidLoad()
         // stackView.addSubview(uiview)
         //        stackView.addArrangedSubview(uiview)
+//        if(billPayment?.type == 0){
+//
+//        }
+//        interactor.getProviderList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,12 +51,12 @@ class BillViewController: UIViewController {
         viewType0.isHidden = true
         viewText.isHidden = true
         
-        let viewType1 = ViewType1()
-        self.view.addSubview(viewType1)
-        viewType1.heightAnchor.constraint(equalToConstant: viewType1.frame.height).isActive = true
+        let viewType5 = ViewType5()
+        self.view.addSubview(viewType5)
+        viewType5.heightAnchor.constraint(equalToConstant: viewType5.frame.height).isActive = true
         stackView.setNeedsLayout()
         stackView.layoutIfNeeded()
-        stackView.insertArrangedSubview(viewType1, at: 1)
+        stackView.insertArrangedSubview(viewType5, at: 1)
     }
 
 }

@@ -8,7 +8,7 @@
 //
 
 protocol DichVuWorkerLogic {
-    
+//    func getListProvider(id: String)
 }
 
 final class DichVuWorker: DichVuWorkerLogic {
@@ -17,4 +17,13 @@ final class DichVuWorker: DichVuWorkerLogic {
     func doSomeWork() {
         // NOTE: Do the work
     }
+    
+//    func getListProvider(id: String){
+//        switch id {
+//        case "16":
+//            PoupCityBuildingConfigurator.viewcontroller()
+//        default:
+//            break
+//        }
+//    }
 }

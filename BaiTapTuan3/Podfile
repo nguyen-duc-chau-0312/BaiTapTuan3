@@ -8,4 +8,5 @@ target 'BaiTapTuan3' do
   # Pods for BaiTapTuan3
 
   pod"SwiftyJSON"
+#  pod 'iOSDropDown'
 end

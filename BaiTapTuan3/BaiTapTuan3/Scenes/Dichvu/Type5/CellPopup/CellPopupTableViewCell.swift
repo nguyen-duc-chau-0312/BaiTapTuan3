@@ -9,6 +9,7 @@ import UIKit
 
 class CellPopupTableViewCell: UITableViewCell {
     @IBOutlet weak var lblText: UILabel!
+    @IBOutlet weak var btnCheckbox: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +20,10 @@ class CellPopupTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func checkBoxClick(_ sender: UIButton) {
+        btnCheckbox.isSelected = !btnCheckbox.isSelected
     }
     
 }

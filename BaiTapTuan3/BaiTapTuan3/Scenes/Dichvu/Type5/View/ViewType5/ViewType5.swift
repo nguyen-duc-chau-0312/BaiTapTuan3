@@ -9,8 +9,15 @@ import UIKit
 
 class ViewType5: UIView {
 
+    @IBOutlet weak var lblTitleHoaDon: UILabel!
     @IBOutlet var viewContent: UIView!
     @IBOutlet weak var btnToggle: UIButton!
+    @IBOutlet weak var btnDistrict: UIButton!
+    @IBOutlet weak var txtCity: UITextField!
+    @IBOutlet weak var txtDistrict: UITextField!
+    @IBOutlet weak var txtBuilding: UITextField!
+    @IBOutlet weak var lblThongtinHoaDon: UILabel!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         if (frame == CGRect(x: 0, y: 0, width: 0, height: 0)){

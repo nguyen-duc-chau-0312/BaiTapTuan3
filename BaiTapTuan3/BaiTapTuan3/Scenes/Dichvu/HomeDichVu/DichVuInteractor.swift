@@ -19,7 +19,6 @@ final class DichVuInteractor {
     private var worker: DichVuWorkerLogic
     let myData = JSONData()
     var listBill: [BillPayment] = []
-    var listCell: [CellBill] = []
     
     required init(withWorker worker: DichVuWorkerLogic) {
         self.worker = worker
@@ -40,19 +39,15 @@ extension DichVuInteractor: DichVuInteractorLogic, BillPaymentImpl {
         }
     }
     
+//    func getDataProvider(data: BillPayment) {
+//        worker.getListProvider(data.id)
+//    }
+
     
-    
-    func createListCell() -> [CellBill] {
+    func createListCell() -> [BillPayment] {
         myData.delegateBill = self
         myData.getDataListBill()
-        print(listBill)
-        for item in listBill {
-            listCell.append(CellBill(label: item.name, img: item.img, type: item.type))
-        }
-        
-        print(listCell)
-        
-        return listCell
+        return listBill
     }
 }
 

@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: Presenter Interface
 protocol DichVuPresentationLogic: class {
-    func showListCellBill(listCellBill: [CellBill])
+    func showListCellBill(listCellBill: [BillPayment])
 }
 
 // MARK: View
@@ -24,8 +24,7 @@ final class DichVuViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var listBill: [BillPayment]?
     var account: AccountObj?
-    var listCell: [CellBill] = []
-    let myData = JSONData()
+//    let myData = JSONData()
     
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -34,7 +33,13 @@ final class DichVuViewController: UIViewController {
         fetchDataOnLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        myData.getDataListBill()
+//        myData.getDataListBill()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     // MARK: Fetch DichVu
@@ -54,8 +59,8 @@ final class DichVuViewController: UIViewController {
 
 // MARK: Connect View, Interactor, and Presenter
 extension DichVuViewController: DichVuPresentationLogic {
-    func showListCellBill(listCellBill: [CellBill]) {
-        listCell = listCellBill
+    func showListCellBill(listCellBill: [BillPayment]) {
+        listBill = listCellBill
     }
     
 }
@@ -63,14 +68,14 @@ extension DichVuViewController: DichVuPresentationLogic {
 extension DichVuViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listCell.count
+        return listBill!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! DichVuCollectionViewCell
 //        cell.lblContent.text = listCell.label
 //        cell.imgView.image = UIImage(named: listCell.img)
-        let temp = listCell[indexPath.row]
+        let temp = listBill![indexPath.row]
         cell.setupData(temp)
         return cell
     }
@@ -78,13 +83,14 @@ extension DichVuViewController: UICollectionViewDataSource {
 
 extension DichVuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cellRow = listCell[indexPath.row]
-        if cellRow.type == "0" {
-            let billVC = BillViewController(nibName: "BillViewController", bundle: nil)
+        let cellRow = listBill![indexPath.row]
+        if cellRow.id == "16" {
+            let billVC = BillType5Configurator.viewcontroller()
             billVC.account = account
+            billVC.billPayment = cellRow
             self.navigationController?.pushViewController(billVC, animated: true)
         }
-        print(listCell)
+        
         print(indexPath.row)
     }
 }

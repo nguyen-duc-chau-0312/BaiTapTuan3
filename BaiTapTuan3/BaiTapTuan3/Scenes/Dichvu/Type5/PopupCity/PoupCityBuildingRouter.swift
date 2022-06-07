@@ -10,7 +10,7 @@
 import UIKit
 
 protocol PoupCityBuildingRoutingLogic: AnyObject {
-    
+    func show(_ dataCell: CityObj)
 }
 
 final class PoupCityBuildingRouter {
@@ -18,6 +18,10 @@ final class PoupCityBuildingRouter {
 }
 
 extension PoupCityBuildingRouter: PoupCityBuildingRoutingLogic {
+    func show(_ dataCell: CityObj) {
+        let items: CityObj = dataCell
+    }
+    
    
     // MARK: Navigation
     /* Example
