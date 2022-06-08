@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PoupCityBuildingViewController" customModule="BaiTapTuan3" customModuleProvider="target">
             <connections>
-                <outlet property="lblTitle" destination="sqJ-bh-KWw" id="yMs-5I-lEh"/>
+                <outlet property="lblTitle" destination="K4X-bo-HLz" id="KCR-mf-CfI"/>
                 <outlet property="mySearchText" destination="9DF-GB-a1E" id="c7x-zd-qxh"/>
                 <outlet property="tableView" destination="Phv-HY-uTM" id="DWN-zd-zyQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -34,8 +34,8 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-Lw-dYj">
-                                    <rect key="frame" x="295" y="12.5" width="30" height="35"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <rect key="frame" x="295" y="13" width="30" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="X">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -78,7 +78,7 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
-                            <real key="value" value="10"/>
+                            <real key="value" value="15"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                             <real key="value" value="1"/>

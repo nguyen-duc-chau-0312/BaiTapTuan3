@@ -12,11 +12,13 @@ class ViewType5: UIView {
     @IBOutlet weak var lblTitleHoaDon: UILabel!
     @IBOutlet var viewContent: UIView!
     @IBOutlet weak var btnToggle: UIButton!
-    @IBOutlet weak var btnDistrict: UIButton!
+    @IBOutlet weak var btnCity: UIButton!
     @IBOutlet weak var txtCity: UITextField!
+    @IBOutlet weak var btnDistrict: UIButton!
     @IBOutlet weak var txtDistrict: UITextField!
     @IBOutlet weak var txtBuilding: UITextField!
     @IBOutlet weak var lblThongtinHoaDon: UILabel!
+    @IBOutlet weak var btnBuilding: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

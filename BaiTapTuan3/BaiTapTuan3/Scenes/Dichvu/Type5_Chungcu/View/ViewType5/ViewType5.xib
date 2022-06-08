@@ -21,7 +21,9 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="btnDistrict" destination="dJc-oJ-Ium" id="eBH-3Z-sST"/>
+                <outlet property="btnBuilding" destination="prm-Oy-kGU" id="OaO-5Y-XZE"/>
+                <outlet property="btnCity" destination="dJc-oJ-Ium" id="eBH-3Z-sST"/>
+                <outlet property="btnDistrict" destination="7Sk-6o-AZP" id="E5C-Mg-eiF"/>
                 <outlet property="btnToggle" destination="qf3-NA-bW6" id="1Im-nC-As8"/>
                 <outlet property="lblThongtinHoaDon" destination="Icn-bz-Cpc" id="i0D-re-BCV"/>
                 <outlet property="lblTitleHoaDon" destination="YNF-sP-e71" id="2eL-7u-D5b"/>

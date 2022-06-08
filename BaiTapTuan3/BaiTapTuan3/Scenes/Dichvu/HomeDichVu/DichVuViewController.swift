@@ -73,8 +73,6 @@ extension DichVuViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! DichVuCollectionViewCell
-//        cell.lblContent.text = listCell.label
-//        cell.imgView.image = UIImage(named: listCell.img)
         let temp = listBill![indexPath.row]
         cell.setupData(temp)
         return cell

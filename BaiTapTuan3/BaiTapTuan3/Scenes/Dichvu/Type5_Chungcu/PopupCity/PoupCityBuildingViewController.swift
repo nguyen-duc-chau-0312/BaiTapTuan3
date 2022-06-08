@@ -23,12 +23,13 @@ final class PoupCityBuildingViewController: UIViewController {
     var interactor: PoupCityBuildingInteractorLogic!
     var router: PoupCityBuildingRoutingLogic!
     var delegatePopup: PopupCityBuildingImpl?
+    var cityName = ""
     
     // MARK: IBOutlet
-    @IBOutlet weak var lblTitle: UIView!
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var mySearchText: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    var listCity: [CityObj]?
+    var listCity: [CityObj] = []
     var tempListCity: [CityObj] = []
     
     // MARK: View lifecycle
@@ -40,7 +41,8 @@ final class PoupCityBuildingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         mySearchText.delegate = self
-        tempListCity = listCity!
+        tempListCity = listCity
+        lblTitle.text = "Tỉnh/Thành phố"
     }
     
     // MARK: Fetch PoupCityBuilding
@@ -51,12 +53,13 @@ final class PoupCityBuildingViewController: UIViewController {
     // MARK: SetupUI
     private func setupView() {
         let nib = UINib(nibName: "CellPopupTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "cell")
+        self.tableView.register(nib, forCellReuseIdentifier: CellPopupTableViewCell.identifer)
     }
     
     // MARK: IBAction
     @IBAction func CancelPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
 }
@@ -70,25 +73,31 @@ extension PoupCityBuildingViewController: PoupCityBuildingPresentationLogic {
 }
 
 extension PoupCityBuildingViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cityName = listCity[indexPath.row].cityName
+        delegatePopup?.getCityName(data: cityName)
+        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.dismiss(animated: false, completion: nil)
+    }
 }
 
 extension PoupCityBuildingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listCity!.count
+        listCity.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellPopupTableViewCell
-        cell.lblText.text = listCity![indexPath.row].cityName
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellPopupTableViewCell.identifer, for: indexPath) as! CellPopupTableViewCell
+        cell.lblText.text = listCity[indexPath.row].cityName
+        
+        if cityName == listCity[indexPath.row].cityName {
+            cell.btnCheckbox.setImage(UIImage(named:"correct"), for: .normal)
+        } else {
+            cell.btnCheckbox.setImage(UIImage(named:"checkbox"), for: .normal)
+        }
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cityName = listCity![indexPath.row].cityName
-        delegatePopup?.getCityName(data: cityName)
-        self.dismiss(animated: true, completion: nil)
-    }
+   
 }
 
 extension PoupCityBuildingViewController: UISearchBarDelegate {

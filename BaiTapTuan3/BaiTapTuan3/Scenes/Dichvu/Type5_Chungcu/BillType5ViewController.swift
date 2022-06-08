@@ -15,8 +15,8 @@ protocol BillType5PresentationLogic: AnyObject {
 }
 
 // MARK: View
-final class BillType5ViewController: UIViewController, PopupCityBuildingImpl {
-    
+final class BillType5ViewController: UIViewController, PopupCityBuildingImpl, PopupDistrictBuildingImpl, PopupBuildingImpl {
+ 
     var interactor: BillType5InteractorLogic!
     var router: BillType5RoutingLogic!
     
@@ -28,11 +28,14 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl {
     var account: AccountObj?
     var billPayment: BillPayment?
     let viewType5 = ViewType5()
-    var cityName: String = ""
+    var cityName = ""
+    var districtName = ""
+    var buildingName = ""
     
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "HÓA ĐƠN PHÍ CHUNG CƯ"
         setupView()
         fetchDataOnLoad()
         loadViewTop()
@@ -56,17 +59,6 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl {
         stackView.setNeedsLayout()
         stackView.layoutIfNeeded()
         stackView.insertArrangedSubview(viewType5, at: 1)
-        print("viewWillDisappear")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("viewDidAppear")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("viewDidDisappear")
     }
     
     // MARK: Fetch BillType5
@@ -82,15 +74,28 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl {
     
     func getCityName(data: String) {
         cityName = data
-        viewType5.txtCity.text = cityName
+        viewType5.txtCity.text = data
+    }
+    
+    func getDistrictName(data: String) {
+        districtName = data
+        viewType5.txtDistrict.text = data
+    }
+    
+    func getbuildingName(buildingName: String) {
+        self.buildingName = buildingName
+        viewType5.txtBuilding.text = buildingName
     }
     
     func loadViewType5() {
-        viewType5.btnDistrict.addTarget(self, action: #selector(loadViewCity), for: .touchUpInside)
-        viewType5.txtCity.text = cityName
         viewType5.lblTitleHoaDon.text = DataText.lblTitleHoaDon
-        viewType5.lblThongtinHoaDon.text = DataText.lblLuuThongTin
+//        viewType5.txtCity.text = cityName
+        viewType5.btnCity.addTarget(self, action: #selector(loadViewCity), for: .touchUpInside)
+        viewType5.txtDistrict.text = districtName
         viewType5.btnDistrict.addTarget(self, action: #selector(loadViewDistrict), for: .touchUpInside)
+        viewType5.txtBuilding.text = buildingName
+        viewType5.btnBuilding.addTarget(self, action: #selector(loadViewBuilding), for: .touchUpInside)
+        viewType5.lblThongtinHoaDon.text = DataText.lblLuuThongTin
     }
     
     //Chuyen man su dung cau lenh navigationcontroller.presentview
@@ -111,8 +116,35 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl {
         popupVC.delegatePopup = self
         popupVC.modalPresentationStyle = .overFullScreen
         popupVC.modalTransitionStyle = .coverVertical
-        self.present(popupVC, animated: true, completion: nil)
+        popupVC.cityName = cityName
+        view.window?.layer.add(AnimationDismiss.share.animationPresent(), forKey: kCATransition)
+        self.present(popupVC, animated: false, completion: nil)
         
+    }
+    
+    @objc func loadViewBuilding() {
+        let popupVC = PopupBuildingConfigurator.viewcontroller()
+        popupVC.delegateBuilding = self
+        popupVC.modalPresentationStyle = .overFullScreen
+        popupVC.modalTransitionStyle = .coverVertical
+        popupVC.buildingName = buildingName
+        view.window?.layer.add(AnimationDismiss.share.animationPresent(), forKey: kCATransition)
+        self.present(popupVC, animated: false, completion: nil)
+    }
+    
+    @objc func loadViewDistrict() {
+        let popupVC = PopupDistrictConfigurator.viewcontroller()
+        popupVC.delegateDistrict = self
+        popupVC.modalPresentationStyle = .overFullScreen
+        popupVC.modalTransitionStyle = .coverVertical
+        popupVC.districtName = districtName
+        view.window?.layer.add(AnimationDismiss.share.animationPresent(), forKey: kCATransition)
+        self.present(popupVC, animated: false, completion: nil)
+    }
+    
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.navigationController?.popViewController(animated: false)
     }
     
     @objc func imageTapped(_ sender: UIButton) {
@@ -124,18 +156,6 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl {
             iconClick = true
             viewTop.lblBalance.text = "\((account?.balance)!) \((account?.ccy)!)"
         }
-    }
-    
-    @objc func loadViewDistrict() {
-        let popupVC = PopupDistrictConfigurator.viewcontroller()
-//        popupVC.delegatePopup = self
-        popupVC.modalPresentationStyle = .overFullScreen
-        popupVC.modalTransitionStyle = .coverVertical
-        self.present(popupVC, animated: true, completion: nil)
-    }
-    
-    @IBAction func cancelPressed(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
     }
     
 }

@@ -10,7 +10,7 @@
 import UIKit
 
 protocol PopupDistrictRoutingLogic: AnyObject {
-    
+    func show(_ dataCell: DistrictObj)
 }
 
 final class PopupDistrictRouter {
@@ -18,6 +18,10 @@ final class PopupDistrictRouter {
 }
 
 extension PopupDistrictRouter: PopupDistrictRoutingLogic {
+    func show(_ dataCell: DistrictObj) {
+        let item: DistrictObj = dataCell
+    }
+    
    
     // MARK: Navigation
     /* Example

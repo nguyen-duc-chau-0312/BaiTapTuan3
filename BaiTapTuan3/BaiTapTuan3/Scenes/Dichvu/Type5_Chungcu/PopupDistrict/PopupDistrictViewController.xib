@@ -13,7 +13,7 @@
                 <outlet property="btnCancel" destination="hRz-f4-1qb" id="7td-Li-gcQ"/>
                 <outlet property="lblTitle" destination="Tnf-Rx-7Cg" id="ZCA-vM-v3L"/>
                 <outlet property="mySearchText" destination="T4w-qe-J5k" id="vtc-dC-fqZ"/>
-                <outlet property="tableView" destination="aXI-cq-R3I" id="fEI-i8-Pwc"/>
+                <outlet property="tableView" destination="aXI-cq-R3I" id="ojv-fY-p9P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,8 +35,8 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRz-f4-1qb">
-                                    <rect key="frame" x="295" y="13.5" width="30" height="33"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="295" y="13" width="30" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <state key="normal" title="X">
                                         <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
@@ -76,6 +76,14 @@
                         <constraint firstAttribute="trailing" secondItem="T4w-qe-J5k" secondAttribute="trailing" id="tkq-TC-jZL"/>
                         <constraint firstItem="T4w-qe-J5k" firstAttribute="top" secondItem="1bx-p6-qJS" secondAttribute="bottom" id="y2k-ZR-3GN"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

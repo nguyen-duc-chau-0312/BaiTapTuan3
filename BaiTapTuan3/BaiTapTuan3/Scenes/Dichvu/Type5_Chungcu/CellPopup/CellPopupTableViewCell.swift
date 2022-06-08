@@ -10,6 +10,7 @@ import UIKit
 class CellPopupTableViewCell: UITableViewCell {
     @IBOutlet weak var lblText: UILabel!
     @IBOutlet weak var btnCheckbox: UIButton!
+    static let identifer = "cell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
