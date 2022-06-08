@@ -1,23 +1,27 @@
 //
-//  BillType0Router.swift
+//  PopupNhaCungCapRouter.swift
 //  BaiTapTuan3
 //
-//  Created Nguyen Duc Chau on 03/06/2022.
+//  Created Nguyen Duc Chau on 08/06/2022.
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //
 
 import UIKit
 
-protocol BillType0RoutingLogic: AnyObject {
+protocol PopupNhaCungCapRoutingLogic: AnyObject {
+    func show(_ dataCell: ServiceTruyenHinhObj)
+}
+
+final class PopupNhaCungCapRouter {
+    weak var viewController: PopupNhaCungCapViewController!
+}
+
+extension PopupNhaCungCapRouter: PopupNhaCungCapRoutingLogic {
+    func show(_ dataCell: ServiceTruyenHinhObj) {
+        let item: ServiceTruyenHinhObj = dataCell
+    }
     
-}
-
-final class BillType0Router {
-    weak var viewController: BillType0ViewController!
-}
-
-extension BillType0Router: BillType0RoutingLogic {
    
     // MARK: Navigation
     /* Example

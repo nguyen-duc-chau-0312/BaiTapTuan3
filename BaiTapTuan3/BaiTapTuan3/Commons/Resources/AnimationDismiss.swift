@@ -7,7 +7,7 @@
 import UIKit
 
 struct AnimationDismiss {
-    static let share = AnimationDismiss()
+    static let shared = AnimationDismiss()
     
     func animationDismiss() -> CATransition {
         let transition: CATransition = CATransition()

@@ -1,17 +1,17 @@
 //
-//  BillType0Worker.swift
+//  CuocTruyenHinhWorker.swift
 //  BaiTapTuan3
 //
-//  Created Nguyen Duc Chau on 03/06/2022.
+//  Created Nguyen Duc Chau on 08/06/2022.
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //
 
-protocol BillType0WorkerLogic {
+protocol CuocTruyenHinhWorkerLogic {
     
 }
 
-final class BillType0Worker: BillType0WorkerLogic {
+final class CuocTruyenHinhWorker: CuocTruyenHinhWorkerLogic {
     // MARK: Business Logic
     
     func doSomeWork() {

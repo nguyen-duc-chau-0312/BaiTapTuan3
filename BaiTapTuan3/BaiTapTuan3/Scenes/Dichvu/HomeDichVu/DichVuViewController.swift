@@ -33,6 +33,7 @@ final class DichVuViewController: UIViewController {
         fetchDataOnLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        title = "THANH TOÁN HOÁ ĐƠN"
 //        myData.getDataListBill()
     }
     
@@ -82,20 +83,26 @@ extension DichVuViewController: UICollectionViewDataSource {
 extension DichVuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cellRow = listBill![indexPath.row]
-        if cellRow.id == "16" {
+        switch cellRow.id {
+        case "7" :
+            let cuocThVC = CuocTruyenHinhConfigurator.viewcontroller()
+            cuocThVC.account = account
+            self.navigationController?.pushViewController(cuocThVC, animated: true)
+        case "16":
             let billVC = BillType5Configurator.viewcontroller()
             billVC.account = account
             billVC.billPayment = cellRow
             self.navigationController?.pushViewController(billVC, animated: true)
+        default:
+            break
         }
         
-        print(indexPath.row)
     }
 }
 
 extension DichVuViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(collectionView.frame.size.width)
+//        print(collectionView.frame.size.width)
         let screenWidth = UIScreen.main.bounds.width - 60
         return CGSize(width: screenWidth/3, height: (screenWidth/3)*1.1)
     }

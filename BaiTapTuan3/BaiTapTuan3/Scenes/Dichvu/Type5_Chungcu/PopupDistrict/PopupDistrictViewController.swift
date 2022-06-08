@@ -61,7 +61,7 @@ final class PopupDistrictViewController: UIViewController {
     
     // MARK: IBAction
     @IBAction func cancelPressed(_ sender: UIButton) {
-        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
 }
@@ -77,7 +77,7 @@ extension PopupDistrictViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let districtName = listDistrict[indexPath.row].districtName
         delegateDistrict?.getDistrictName(data: districtName)
-        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
 }

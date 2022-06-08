@@ -117,7 +117,7 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl, Po
         popupVC.modalPresentationStyle = .overFullScreen
         popupVC.modalTransitionStyle = .coverVertical
         popupVC.cityName = cityName
-        view.window?.layer.add(AnimationDismiss.share.animationPresent(), forKey: kCATransition)
+        view.window?.layer.add(AnimationDismiss.shared.animationPresent(), forKey: kCATransition)
         self.present(popupVC, animated: false, completion: nil)
         
     }
@@ -128,7 +128,7 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl, Po
         popupVC.modalPresentationStyle = .overFullScreen
         popupVC.modalTransitionStyle = .coverVertical
         popupVC.buildingName = buildingName
-        view.window?.layer.add(AnimationDismiss.share.animationPresent(), forKey: kCATransition)
+        view.window?.layer.add(AnimationDismiss.shared.animationPresent(), forKey: kCATransition)
         self.present(popupVC, animated: false, completion: nil)
     }
     
@@ -138,12 +138,12 @@ final class BillType5ViewController: UIViewController, PopupCityBuildingImpl, Po
         popupVC.modalPresentationStyle = .overFullScreen
         popupVC.modalTransitionStyle = .coverVertical
         popupVC.districtName = districtName
-        view.window?.layer.add(AnimationDismiss.share.animationPresent(), forKey: kCATransition)
+        view.window?.layer.add(AnimationDismiss.shared.animationPresent(), forKey: kCATransition)
         self.present(popupVC, animated: false, completion: nil)
     }
     
     @IBAction func cancelPressed(_ sender: UIButton) {
-        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.navigationController?.popViewController(animated: false)
     }
     

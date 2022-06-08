@@ -61,7 +61,7 @@ final class PopupBuildingViewController: UIViewController {
     
     // MARK: IBAction
     @IBAction func cancelPressed(_ sender: UIButton) {
-        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
 }
@@ -79,7 +79,7 @@ extension PopupBuildingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let buildingName = listBuilding[indexPath.row].buildingName
         delegateBuilding?.getbuildingName(buildingName: buildingName)
-        self.view.window!.layer.add(AnimationDismiss.share.animationDismiss(), forKey: nil)
+        self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
 }

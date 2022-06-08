@@ -1,25 +1,23 @@
 //
-//  BillType0Configurator.swift
+//  CuocTruyenHinhConfigurator.swift
 //  BaiTapTuan3
 //
-//  Created Nguyen Duc Chau on 03/06/2022.
+//  Created Nguyen Duc Chau on 08/06/2022.
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //
 
-//Danh cho Tien dien, Tien nuoc ... Bill.type = 0
-
 import UIKit
 
-final class BillType0Configurator {
+final class CuocTruyenHinhConfigurator {
     
     // MARK: Configuration
-    class func viewcontroller() -> BillType0ViewController {
+    class func viewcontroller() -> CuocTruyenHinhViewController {
         
         // MARK: Initialise components.
-        let viewController = BillType0ViewController(nibName: "BillType0ViewController", bundle: nil)
-        let interactor = BillType0Interactor(withWorker: BillType0Worker())
-        let router = BillType0Router()
+        let viewController = CuocTruyenHinhViewController(nibName: "CuocTruyenHinhViewController", bundle: nil)
+        let interactor = CuocTruyenHinhInteractor(withWorker: CuocTruyenHinhWorker())
+        let router = CuocTruyenHinhRouter()
         
         // MARK: link VIP components.
         viewController.interactor = interactor

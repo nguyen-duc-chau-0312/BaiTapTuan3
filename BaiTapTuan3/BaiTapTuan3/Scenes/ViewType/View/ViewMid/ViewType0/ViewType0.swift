@@ -12,6 +12,12 @@ class ViewType0: UIView {
     //Type0 Thanh toan truyen hinh cap, hoa don tien nuoc, hoa don tien dien
     @IBOutlet var viewContent: UIView!
     @IBOutlet weak var btnToggle: UIButton!
+    @IBOutlet weak var btnMaKH: UIButton!
+    @IBOutlet weak var txtNCC: UITextField!
+    @IBOutlet weak var btnNhaCungCap: UIButton!
+    @IBOutlet weak var txtKH: UITextField!
+    @IBOutlet weak var lblThongtin: UILabel!
+    @IBOutlet weak var lblLuuThongTin: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

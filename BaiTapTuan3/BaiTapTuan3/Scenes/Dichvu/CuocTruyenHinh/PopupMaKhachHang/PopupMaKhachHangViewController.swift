@@ -1,8 +1,8 @@
 //
-//  PoupCityBuildingViewController.swift
+//  PopupMaKhachHangViewController.swift
 //  BaiTapTuan3
 //
-//  Created Nguyen Duc Chau on 07/06/2022.
+//  Created Nguyen Duc Chau on 08/06/2022.
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //
@@ -10,27 +10,27 @@
 import UIKit
 
 // MARK: Presenter Interface
-protocol PoupCityBuildingPresentationLogic: AnyObject {
-    func showListCellCity(listCellBill: [CityObj])
+protocol PopupMaKhachHangPresentationLogic: AnyObject {
+    func showListCellCity(listCellNhaCungCap: [ServiceTruyenHinhObj])
 }
 
-protocol PopupCityBuildingImpl {
-    func getCityName(data: String)
+protocol PopupMaKhachHangImpl{
+    func getSerCode(serCode: String)
 }
 
 // MARK: View
-final class PoupCityBuildingViewController: UIViewController {
-    var interactor: PoupCityBuildingInteractorLogic!
-    var router: PoupCityBuildingRoutingLogic!
-    var delegatePopup: PopupCityBuildingImpl?
-    var cityName = ""
+final class PopupMaKhachHangViewController: UIViewController {
+    var interactor: PopupMaKhachHangInteractorLogic!
+    var router: PopupMaKhachHangRoutingLogic!
     
     // MARK: IBOutlet
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var mySearchText: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    var listCity: [CityObj] = []
-    var tempListCity: [CityObj] = []
+    var delegateKH: PopupMaKhachHangImpl?
+    var listMaKH: [ServiceTruyenHinhObj] = []
+    var tempListMaKH: [ServiceTruyenHinhObj] = []
+    var serCode = ""
     
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -41,13 +41,15 @@ final class PoupCityBuildingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         mySearchText.delegate = self
-        tempListCity = listCity
-        lblTitle.text = "Tỉnh/Thành phố"
+        lblTitle.text = "Mã khách hàng"
+        tempListMaKH = listMaKH
     }
     
-    // MARK: Fetch PoupCityBuilding
+    // MARK: Fetch PopupMaKhachHang
     private func fetchDataOnLoad() {
-        interactor.fetchDataListCity(data: "Data City")
+        // NOTE: Ask the Interactor to do some work
+        interactor.fetchDataListMaKhangHang(data: "Du lieu JSON")
+        
     }
     
     // MARK: SetupUI
@@ -57,59 +59,54 @@ final class PoupCityBuildingViewController: UIViewController {
     }
     
     // MARK: IBAction
-    @IBAction func CancelPressed(_ sender: UIButton) {
+    @IBAction func cancelPressed(_ sender: UIButton) {
         self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
-    
 }
 
 // MARK: Connect View, Interactor, and Presenter
-extension PoupCityBuildingViewController: PoupCityBuildingPresentationLogic {
-    func showListCellCity(listCellBill: [CityObj]) {
-        self.listCity = listCellBill
+extension PopupMaKhachHangViewController: PopupMaKhachHangPresentationLogic {
+    func showListCellCity(listCellNhaCungCap: [ServiceTruyenHinhObj]) {
+        listMaKH = listCellNhaCungCap
     }
     
 }
 
-extension PoupCityBuildingViewController: UITableViewDelegate {
+extension PopupMaKhachHangViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cityName = listCity[indexPath.row].cityName
-        delegatePopup?.getCityName(data: cityName)
+        let serCode = listMaKH[indexPath.row].serCode
+        delegateKH?.getSerCode(serCode: serCode)
         self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
 }
 
-extension PoupCityBuildingViewController: UITableViewDataSource {
+extension PopupMaKhachHangViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listCity.count
+        return listMaKH.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellPopupTableViewCell.identifer, for: indexPath) as! CellPopupTableViewCell
-        cell.lblText.text = listCity[indexPath.row].cityName
-        
-        if cityName == listCity[indexPath.row].cityName {
+        cell.lblText.text = listMaKH[indexPath.row].serCode
+        if serCode == listMaKH[indexPath.row].serCode {
             cell.btnCheckbox.setImage(UIImage(named:"correct"), for: .normal)
         } else {
             cell.btnCheckbox.setImage(UIImage(named:"checkbox"), for: .normal)
         }
         return cell
     }
-   
 }
 
-extension PoupCityBuildingViewController: UISearchBarDelegate {
+extension PopupMaKhachHangViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
         if searchText != "" {
-            listCity = tempListCity.filter{ $0.cityName.contains(searchText)}
+            tempListMaKH = listMaKH.filter{ $0.serCode.contains(searchText)}
             tableView.reloadData()
-            
         } else {
             print("Khong co gi de tim kiem")
-            listCity = tempListCity
+            tempListMaKH = listMaKH
             tableView.reloadData()
         }
     }
