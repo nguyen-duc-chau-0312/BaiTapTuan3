@@ -55,9 +55,9 @@ final class CuocTruyenHinhViewController: UIViewController, PopupNhaCungCapImpl,
         viewText.lblUnderline.text = "Cài đặt ngay"
         viewText.lblUnderline.textColor = .orange
         viewText.backgroundColor = .gray
-        
-        let stringValue = "SoftOTP để đảm bảo tính bảo mật và tiết kiệm thời\ngian hơn khi giao dịch tài chính trên Ứng dụng."
-        viewText.lblOtp.text = stringValue
+//
+//        let stringValue = "SoftOTP để đảm bảo tính bảo mật và tiết kiệm thời\ngian hơn khi giao dịch tài chính trên Ứng dụng."
+//        viewText.lblOtp.text = stringValue
         
         loadViewType0()
         

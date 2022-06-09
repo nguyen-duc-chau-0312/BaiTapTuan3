@@ -21,22 +21,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfe-1S-0nJ">
-                    <rect key="frame" x="0.0" y="0.0" width="290" height="14.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="16"/>
                     <attributedString key="attributedText">
                         <fragment content="Lưu ý: Quý khách nên sử dụng hình thức xác thực bằng">
                             <attributes>
-                                <font key="NSFont" size="13" name=".SFNS-Regular"/>
+                                <font key="NSFont" metaFont="system"/>
                             </attributes>
                         </fragment>
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="Zrp-7g-pKd">
-                    <rect key="frame" x="0.0" y="19" width="343" height="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="Zrp-7g-pKd">
+                    <rect key="frame" x="0.0" y="19" width="343" height="31.5"/>
                     <attributedString key="attributedText">
                         <fragment content="SoftOTP để đảm bảo tính bảo mật và tiết kiệm thời gian hơn khi giao dịch tài chính trên Ứng dụng.">
                             <attributes>
-                                <font key="NSFont" size="13" name=".SFNS-Regular"/>
+                                <font key="NSFont" metaFont="system"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
@@ -44,11 +44,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edS-uj-8Nd">
-                    <rect key="frame" x="0.0" y="34" width="30" height="14.5"/>
+                    <rect key="frame" x="0.0" y="52.5" width="33" height="16"/>
                     <attributedString key="attributedText">
                         <fragment content="Label">
                             <attributes>
-                                <font key="NSFont" size="13" name=".SFNS-Regular"/>
+                                <font key="NSFont" metaFont="system"/>
                                 <integer key="NSUnderline" value="1"/>
                             </attributes>
                         </fragment>
@@ -60,7 +60,9 @@
             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="edS-uj-8Nd" firstAttribute="top" secondItem="Zrp-7g-pKd" secondAttribute="bottom" constant="2" id="5o1-4b-bgR"/>
+                <constraint firstAttribute="trailing" secondItem="Zrp-7g-pKd" secondAttribute="trailing" id="HQx-bp-LoW"/>
                 <constraint firstItem="Zrp-7g-pKd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LZk-e7-Jnk"/>
+                <constraint firstAttribute="trailing" secondItem="Rfe-1S-0nJ" secondAttribute="trailing" id="VW6-bv-twv"/>
                 <constraint firstItem="Rfe-1S-0nJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YeR-F0-6us"/>
                 <constraint firstItem="Zrp-7g-pKd" firstAttribute="top" secondItem="Rfe-1S-0nJ" secondAttribute="bottom" constant="3" id="bb4-B8-eTo"/>
                 <constraint firstItem="Rfe-1S-0nJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cXl-dE-AOk"/>

@@ -92,6 +92,10 @@ extension DichVuViewController: UICollectionViewDelegate {
             let cuocDienVC = HoaDonDienConfigurator.viewcontroller()
             cuocDienVC.account = account
             self.navigationController?.pushViewController(cuocDienVC, animated: true)
+        case "3" :
+            let nuocVC = NuocConfigurator.viewcontroller()
+            nuocVC.account = account
+            self.navigationController?.pushViewController(nuocVC, animated: true)
         case "7" :
             let cuocThVC = CuocTruyenHinhConfigurator.viewcontroller()
             cuocThVC.account = account

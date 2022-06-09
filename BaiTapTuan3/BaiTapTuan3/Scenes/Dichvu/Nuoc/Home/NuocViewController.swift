@@ -1,8 +1,8 @@
 //
-//  HoaDonDienViewController.swift
+//  NuocViewController.swift
 //  BaiTapTuan3
 //
-//  Created Nguyen Duc Chau on 08/06/2022.
+//  Created Nguyen Duc Chau on 09/06/2022.
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //
@@ -10,22 +10,22 @@
 import UIKit
 
 // MARK: Presenter Interface
-protocol HoaDonDienPresentationLogic: AnyObject {
+protocol NuocPresentationLogic: AnyObject {
     
 }
 
 // MARK: View
-final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl, PopupMaKhachHangDienImpl {
- 
-    var interactor: HoaDonDienInteractorLogic!
-    var router: HoaDonDienRoutingLogic!
+final class NuocViewController: UIViewController, PopupNhaCungCapNuocImpl, PopupMaKhachHangNuocImpl {
+    
+    var interactor: NuocInteractorLogic!
+    var router: NuocRoutingLogic!
     
     // MARK: IBOutlet
-    @IBOutlet weak var viewTop: ViewTop!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var viewTop: ViewTop!
+    var iconClick = true
     var account: AccountObj?
     let viewType0 = ViewType0()
-    var iconClick = true
     var serName = ""
     var serCode = ""
     
@@ -35,12 +35,10 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
         setupView()
         fetchDataOnLoad()
         loadViewTop()
-        title = "HÓA ĐƠN TIỀN ĐIỆN"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.view.addSubview(viewType0)
         viewType0.heightAnchor.constraint(equalToConstant: viewType0.frame.height).isActive = true
         stackView.setNeedsLayout()
@@ -61,9 +59,10 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
 //        viewText.lblOtp.text = stringValue
         
         loadViewType0()
+        
     }
     
-    // MARK: Fetch HoaDonDien
+    // MARK: Fetch Nuoc
     private func fetchDataOnLoad() {
         // NOTE: Ask the Interactor to do some work
         
@@ -74,7 +73,7 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
         
     }
     
-    func getNameNhaCungCapDien(serName: String) {
+    func getNameNhaCungCapNuoc(serName: String) {
         self.serName = serName
         viewType0.txtNCC.text = serName
     }
@@ -84,12 +83,6 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
         viewType0.txtKH.text = serCode
     }
     
-    func loadViewType0() {
-        viewType0.lblThongtin.text = DataText.lblTitleHoaDon
-        viewType0.btnNhaCungCap.addTarget(self, action: #selector(loadViewNhaCungCap), for: .touchUpInside)
-        viewType0.btnMaKH.addTarget(self, action: #selector(loadViewMaKH), for: .touchUpInside)
-        viewType0.lblLuuThongTin.text = DataText.lblLuuThongTin
-    }
     
     private func loadViewTop(){
         viewTop.lblTKnguon.text = DataText.lblTKN
@@ -99,6 +92,13 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
         viewTop.btnEye.addTarget(self, action: #selector(imageTapped), for: .touchUpInside)
     }
     
+    func loadViewType0(){
+        viewType0.lblThongtin.text = DataText.lblTitleHoaDon
+        viewType0.btnNhaCungCap.addTarget(self, action: #selector(loadViewNhaCungCap), for: .touchUpInside)
+        viewType0.btnMaKH.addTarget(self, action: #selector(loadViewMaKH), for: .touchUpInside)
+        viewType0.lblLuuThongTin.text = DataText.lblLuuThongTin
+    }
+    
     // MARK: IBAction
     @IBAction func cancelPressed(_ sender: UIButton) {
         self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
@@ -106,8 +106,8 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
     }
     
     @objc func loadViewNhaCungCap() {
-        let popupVC = PopupNhaCungCapDienConfigurator.viewcontroller()
-        popupVC.delegateNhaCungCapDien = self
+        let popupVC = PopupNhaCungCapNuocConfigurator.viewcontroller()
+        popupVC.delegateNhaCungCapNuoc = self
         popupVC.modalPresentationStyle = .overFullScreen
         popupVC.modalTransitionStyle = .coverVertical
         popupVC.serName = serName
@@ -117,8 +117,8 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
     }
     
     @objc func loadViewMaKH() {
-        let popupVC = PopupMaKhachHangDienConfigurator.viewcontroller()
-        popupVC.delegateKH = self
+        let popupVC = PopupMKHNuocConfigurator.viewcontroller()
+        popupVC.delegateNuoc = self
         popupVC.modalPresentationStyle = .overFullScreen
         popupVC.modalTransitionStyle = .coverVertical
         popupVC.serCode = serCode
@@ -139,6 +139,6 @@ final class HoaDonDienViewController: UIViewController, PopupNhaCungCapDienImpl,
 }
 
 // MARK: Connect View, Interactor, and Presenter
-extension HoaDonDienViewController: HoaDonDienPresentationLogic {
+extension NuocViewController: NuocPresentationLogic {
     
 }
