@@ -1,8 +1,8 @@
 //
-//  PopupNhaCungCapViewController.swift
+//  PopupNhaCungCapDienViewController.swift
 //  BaiTapTuan3
 //
-//  Created Nguyen Duc Chau on 08/06/2022.
+//  Created Nguyen Duc Chau on 09/06/2022.
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //
@@ -10,27 +10,29 @@
 import UIKit
 
 // MARK: Presenter Interface
-protocol PopupNhaCungCapPresentationLogic: AnyObject {
-    func showListCellTruyenHinh(listCellNhaCungCap: [ServiceTruyenHinhObj])
+protocol PopupNhaCungCapDienPresentationLogic: AnyObject {
+    func showListCellDien(listCellNhaCungCap: [ServiceDienObj])
+
 }
 
-protocol PopupNhaCungCapImpl {
-    func getNameNhaCungCap(serName: String)
+protocol PopupNhaCungCapDienImpl {
+    func getNameNhaCungCapDien(serName: String)
 }
 
 // MARK: View
-final class PopupNhaCungCapViewController: UIViewController {
-    var interactor: PopupNhaCungCapInteractorLogic!
-    var router: PopupNhaCungCapRoutingLogic!
+final class PopupNhaCungCapDienViewController: UIViewController {
+    var interactor: PopupNhaCungCapDienInteractorLogic!
+    var router: PopupNhaCungCapDienRoutingLogic!
     
     // MARK: IBOutlet
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var mySearchText: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    var delegateNhaCungCap: PopupNhaCungCapImpl?
-    var listNCC: [ServiceTruyenHinhObj] = []
-    var tempListNCC: [ServiceTruyenHinhObj] = []
-    var name = ""
+    var delegateNhaCungCapDien: PopupNhaCungCapDienImpl?
+    var listNCC: [ServiceDienObj] = []
+    var tempListNCC: [ServiceDienObj] = []
+    var serName = ""
+    
     
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -42,13 +44,13 @@ final class PopupNhaCungCapViewController: UIViewController {
         tableView.dataSource = self
         mySearchText.delegate = self
         tempListNCC = listNCC
-        lblTitle.text = "Nhà cung cấp dịch vụ"
+        lblTitle.text = "Nhà cung cấp"
     }
     
-    // MARK: Fetch PopupNhaCungCap
+    // MARK: Fetch PopupNhaCungCapDien
     private func fetchDataOnLoad() {
         // NOTE: Ask the Interactor to do some work
-        interactor.fetchDataNhaCungCap(data: "Du lieu JSON")
+        interactor.fetchDataListNhaCungCapDien(data: "Du lieu JSON")
     }
     
     // MARK: SetupUI
@@ -65,50 +67,48 @@ final class PopupNhaCungCapViewController: UIViewController {
 }
 
 // MARK: Connect View, Interactor, and Presenter
-extension PopupNhaCungCapViewController: PopupNhaCungCapPresentationLogic {
-    func showListCellTruyenHinh(listCellNhaCungCap: [ServiceTruyenHinhObj]) {
-        listNCC = listCellNhaCungCap
+extension PopupNhaCungCapDienViewController: PopupNhaCungCapDienPresentationLogic {
+    func showListCellDien(listCellNhaCungCap: [ServiceDienObj]) {
+        self.listNCC = listCellNhaCungCap
     }
     
 }
 
-extension PopupNhaCungCapViewController: UITableViewDelegate {
+extension PopupNhaCungCapDienViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nameNCC = listNCC[indexPath.row].serName
-        delegateNhaCungCap?.getNameNhaCungCap(serName: nameNCC)
+        delegateNhaCungCapDien?.getNameNhaCungCapDien(serName: nameNCC)
         self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
 }
 
-extension PopupNhaCungCapViewController: UITableViewDataSource {
+extension PopupNhaCungCapDienViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listNCC.count
+        return listNCC.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellPopupTableViewCell.identifer, for: indexPath) as! CellPopupTableViewCell
         cell.lblText.text = listNCC[indexPath.row].serName
-        if name == listNCC[indexPath.row].serName {
+        if serName == listNCC[indexPath.row].serName {
             cell.btnCheckbox.setImage(UIImage(named:"correct"), for: .normal)
         } else {
             cell.btnCheckbox.setImage(UIImage(named:"checkbox"), for: .normal)
         }
         return cell
+        
     }
 }
 
-extension PopupNhaCungCapViewController: UISearchBarDelegate {
+extension PopupNhaCungCapDienViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
-            listNCC = tempListNCC.filter{ $0.serName.contains(searchText)}
+            listNCC = tempListNCC.filter{ $0.serName.contains(searchText) }
             tableView.reloadData()
-            
         } else {
             listNCC = tempListNCC
             tableView.reloadData()
         }
     }
 }
-
-

@@ -20,7 +20,7 @@ class JSONData {
     var delegateNuoc: NuocServiceImpl?
     var listNuocService: [ServiceNuocObj] = []
     var listTruyenHinhService: [ServiceTruyenHinhObj] = []
-    var listDienService: [ServiceObj] = []
+    var listDienService: [ServiceDienObj] = []
     var listDistrict: [DistrictObj] = []
     var listChungCuCity: [CityObj] = []
     var listChungCuBuild: [BuildingObj] = []

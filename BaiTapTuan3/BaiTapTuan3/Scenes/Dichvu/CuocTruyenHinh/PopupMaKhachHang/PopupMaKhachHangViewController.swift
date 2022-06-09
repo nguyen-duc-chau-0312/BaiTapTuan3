@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: Presenter Interface
 protocol PopupMaKhachHangPresentationLogic: AnyObject {
-    func showListCellCity(listCellNhaCungCap: [ServiceTruyenHinhObj])
+    func showListCellTruyenHinh(listCellKH: [ServiceTruyenHinhObj])
 }
 
 protocol PopupMaKhachHangImpl{
@@ -67,8 +67,8 @@ final class PopupMaKhachHangViewController: UIViewController {
 
 // MARK: Connect View, Interactor, and Presenter
 extension PopupMaKhachHangViewController: PopupMaKhachHangPresentationLogic {
-    func showListCellCity(listCellNhaCungCap: [ServiceTruyenHinhObj]) {
-        listMaKH = listCellNhaCungCap
+    func showListCellTruyenHinh(listCellKH: [ServiceTruyenHinhObj]) {
+        listMaKH = listCellKH
     }
     
 }
@@ -105,7 +105,6 @@ extension PopupMaKhachHangViewController: UISearchBarDelegate {
             tempListMaKH = listMaKH.filter{ $0.serCode.contains(searchText)}
             tableView.reloadData()
         } else {
-            print("Khong co gi de tim kiem")
             tempListMaKH = listMaKH
             tableView.reloadData()
         }

@@ -108,7 +108,6 @@ extension PoupCityBuildingViewController: UISearchBarDelegate {
             tableView.reloadData()
             
         } else {
-            print("Khong co gi de tim kiem")
             listCity = tempListCity
             tableView.reloadData()
         }

@@ -9,7 +9,7 @@ import Foundation
 import SwiftyJSON
 
 protocol DienServiceImpl {
-    func getDataServiceObj(data: [ServiceObj])
+    func getDataServiceObj(data: [ServiceDienObj])
 }
 
 struct DienObj {
@@ -31,19 +31,19 @@ struct DienObj {
 
 struct BillService {
     let name: String
-    var listService: [ServiceObj]
+    var listService: [ServiceDienObj]
     
     init(_ json: JSON) {
         self.name = json["Name"].stringValue
         self.listService = []
         let list = json["Service"].arrayValue
         for item in list {
-            self.listService.append(ServiceObj(item))
+            self.listService.append(ServiceDienObj(item))
         }
     }
 }
 
-struct ServiceObj {
+struct ServiceDienObj {
     let proCode: String
     let serCode: String
     let serName: String

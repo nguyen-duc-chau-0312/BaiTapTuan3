@@ -29,7 +29,7 @@ extension PopupMaKhachHangInteractor: PopupMaKhachHangInteractorLogic, TruyenHin
     
     func fetchDataListMaKhangHang(data: String) {
         let result = createListCell()
-        presenter.showListCellCity(listCellNhaCungCap: result)
+        presenter.showListCellTruyenHinh(listCellKH: result)
     }
     
     func getDataNuocService(data: [ServiceTruyenHinhObj]) {

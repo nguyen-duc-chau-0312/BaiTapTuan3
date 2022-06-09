@@ -30,7 +30,7 @@ extension PopupNhaCungCapInteractor: PopupNhaCungCapInteractorLogic, TruyenHinhS
     
     func fetchDataNhaCungCap(data: String) {
         let result = createListCell()
-        presenter.showListCellCity(listCellNhaCungCap: result)
+        presenter.showListCellTruyenHinh(listCellNhaCungCap: result)
     }
     
     func getDataNuocService(data: [ServiceTruyenHinhObj]) {
