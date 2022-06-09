@@ -31,4 +31,5 @@ struct DataText {
     static let lblText2 = "để xác nhận giao dịch bằng vân tay"
     static let lblTitleHoaDon = "Thông tin hoá đơn"
     static let lblLuuThongTin = "Lưu thông tin hoá đơn"
+    static let lblThongTinDV = "Thông tin dịch vụ"
 }
