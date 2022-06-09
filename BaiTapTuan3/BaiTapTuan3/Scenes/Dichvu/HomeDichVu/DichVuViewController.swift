@@ -84,6 +84,10 @@ extension DichVuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cellRow = listBill![indexPath.row]
         switch cellRow.id {
+        case "1" :
+            let chungKhoanVC = ChungKhoanConfigurator.viewcontroller()
+            chungKhoanVC.account = account
+            self.navigationController?.pushViewController(chungKhoanVC, animated: true)
         case "2" :
             let cuocDienVC = HoaDonDienConfigurator.viewcontroller()
             cuocDienVC.account = account

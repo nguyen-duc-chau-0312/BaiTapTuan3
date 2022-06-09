@@ -12,7 +12,6 @@ import UIKit
 // MARK: Presenter Interface
 protocol PopupNhaCungCapDienPresentationLogic: AnyObject {
     func showListCellDien(listCellNhaCungCap: [ServiceDienObj])
-
 }
 
 protocol PopupNhaCungCapDienImpl {
@@ -104,8 +103,9 @@ extension PopupNhaCungCapDienViewController: UITableViewDataSource {
 extension PopupNhaCungCapDienViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
-            listNCC = tempListNCC.filter{ $0.serName.contains(searchText) }
+            listNCC = tempListNCC.filter{ $0.serName.contains(searchText)}
             tableView.reloadData()
+            
         } else {
             listNCC = tempListNCC
             tableView.reloadData()

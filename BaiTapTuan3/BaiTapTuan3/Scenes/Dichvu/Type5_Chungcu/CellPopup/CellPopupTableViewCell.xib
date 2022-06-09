@@ -28,8 +28,8 @@
                             <action selector="checkBoxClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Vp-Bc-lNz"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va1-pn-di9">
-                        <rect key="frame" x="49" y="16" width="41.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va1-pn-di9">
+                        <rect key="frame" x="49" y="16.5" width="279" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,6 +37,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="afo-kn-Xdu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Ci5-vf-jbV"/>
+                    <constraint firstAttribute="trailing" secondItem="va1-pn-di9" secondAttribute="trailing" id="TF2-uI-iJd"/>
                     <constraint firstItem="va1-pn-di9" firstAttribute="leading" secondItem="afo-kn-Xdu" secondAttribute="trailing" constant="10" id="VyD-q8-al2"/>
                     <constraint firstItem="afo-kn-Xdu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="fd3-ei-5Rb"/>
                     <constraint firstItem="va1-pn-di9" firstAttribute="centerY" secondItem="afo-kn-Xdu" secondAttribute="centerY" id="vqP-fb-KNn"/>

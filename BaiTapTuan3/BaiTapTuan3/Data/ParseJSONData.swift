@@ -28,6 +28,8 @@ class JSONData {
     var accountArrTT: [AccountObj] = []
     var accountArrTK: [AccountObj] = []
     var listBill: [BillPayment] = []
+    var listChungKhoan: [ChungKhoanService] = []
+    var delegateChungKhoan: ChungKhoanServiceImpl?
     var accountBankType: String = ""
     var userName: String = ""
     
@@ -200,6 +202,30 @@ class JSONData {
             }
         }
         delegateTruyenHinh?.getDataNuocService(data: listTruyenHinhService)
+    }
+    
+    func getDataListChungKhoanSerivce() {
+        if let path = Bundle.main.path(forResource: "dataChungkhoan", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let chungKhoan = ChungKhoanObj(JSON(rawValue: jsonResult) ?? "")
+                let temp = chungKhoan.listBill
+
+                for item in temp {
+                    for i in item.listProvider {
+                        for j in i.listChungKhoanService {
+                            self.listChungKhoan.append(j)
+                        }
+                    }
+                }
+                
+            } catch{
+                print(error)
+                
+            }
+        }
+        delegateChungKhoan?.getDataServiceObj(data: listChungKhoan)
     }
     
     

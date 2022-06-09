@@ -102,10 +102,11 @@ extension PopupMaKhachHangViewController: UITableViewDataSource {
 extension PopupMaKhachHangViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
-            tempListMaKH = listMaKH.filter{ $0.serCode.contains(searchText)}
+            listMaKH = tempListMaKH.filter{ $0.serName.contains(searchText)}
             tableView.reloadData()
+            
         } else {
-            tempListMaKH = listMaKH
+            listMaKH = tempListMaKH
             tableView.reloadData()
         }
     }

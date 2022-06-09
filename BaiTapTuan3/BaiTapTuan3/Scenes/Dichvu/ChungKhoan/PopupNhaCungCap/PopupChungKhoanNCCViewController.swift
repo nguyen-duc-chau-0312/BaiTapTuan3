@@ -1,5 +1,5 @@
 //
-//  PopupMaKhachHangDienViewController.swift
+//  PopupChungKhoanNCCViewController.swift
 //  BaiTapTuan3
 //
 //  Created Nguyen Duc Chau on 09/06/2022.
@@ -10,45 +10,44 @@
 import UIKit
 
 // MARK: Presenter Interface
-protocol PopupMaKhachHangDienPresentationLogic: AnyObject {
-    func showListCellDien(listCellKH: [ServiceDienObj])
+protocol PopupChungKhoanNCCPresentationLogic: AnyObject {
+    func showListCellChungKhoan(listCellNhaCungCap: [ChungKhoanService])
 }
 
-protocol PopupMaKhachHangDienImpl{
-    func getSerCode(serCode: String)
+protocol PopupNhaCungCapChungKhoanImpl {
+    func getNameNhaCungCapChungKhoan(serName: String)
 }
 
 // MARK: View
-final class PopupMaKhachHangDienViewController: UIViewController {
-    var interactor: PopupMaKhachHangDienInteractorLogic!
-    var router: PopupMaKhachHangDienRoutingLogic!
+final class PopupChungKhoanNCCViewController: UIViewController {
+    var interactor: PopupChungKhoanNCCInteractorLogic!
+    var router: PopupChungKhoanNCCRoutingLogic!
     
     // MARK: IBOutlet
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var mySearchText: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    var delegateKH: PopupMaKhachHangDienImpl?
-    var listMaKH: [ServiceDienObj] = []
-    var tempListMaKH: [ServiceDienObj] = []
-    var serCode = ""
+    var delegateChungKhoan: PopupNhaCungCapChungKhoanImpl?
+    var listChungKhoan: [ChungKhoanService] = []
+    var tempListChungKhoan: [ChungKhoanService] = []
+    var serName = ""
     
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         fetchDataOnLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         mySearchText.delegate = self
-        lblTitle.text = "Mã khách hàng"
-        tempListMaKH = listMaKH
+        lblTitle.text = "Nhà cung cấp"
+        tempListChungKhoan = listChungKhoan
     }
     
-    // MARK: Fetch PopupMaKhachHangDien
+    // MARK: Fetch PopupChungKhoanNCC
     private func fetchDataOnLoad() {
         // NOTE: Ask the Interactor to do some work
-        interactor.fetchDataListMaKhangHang(data: "Du lieu JSON")
+        interactor.fetchDataListNhaCungCapChungKhoan(data: "Du Lieu JSON")
     }
     
     // MARK: SetupUI
@@ -58,37 +57,38 @@ final class PopupMaKhachHangDienViewController: UIViewController {
     }
     
     // MARK: IBAction
-    @IBAction func cancelPreseed(_ sender: UIButton) {
-        self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        view.window?.layer.add(AnimationDismiss.shared.animationPresent(), forKey: kCATransition)
         self.dismiss(animated: false, completion: nil)
     }
 }
 
 // MARK: Connect View, Interactor, and Presenter
-extension PopupMaKhachHangDienViewController: PopupMaKhachHangDienPresentationLogic {
-    func showListCellDien(listCellKH: [ServiceDienObj]) {
-        self.listMaKH = listCellKH
+extension PopupChungKhoanNCCViewController: PopupChungKhoanNCCPresentationLogic {
+    func showListCellChungKhoan(listCellNhaCungCap: [ChungKhoanService]) {
+        self.listChungKhoan = listCellNhaCungCap
     }
+    
 }
 
-extension PopupMaKhachHangDienViewController: UITableViewDelegate {
+extension PopupChungKhoanNCCViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let serCode = listMaKH[indexPath.row].serCode
-        delegateKH?.getSerCode(serCode: serCode)
+        let nameNCC = listChungKhoan[indexPath.row].serName
+        delegateChungKhoan?.getNameNhaCungCapChungKhoan(serName: nameNCC)
         self.view.window!.layer.add(AnimationDismiss.shared.animationDismiss(), forKey: nil)
         self.dismiss(animated: false, completion: nil)
     }
 }
 
-extension PopupMaKhachHangDienViewController: UITableViewDataSource {
+extension PopupChungKhoanNCCViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listMaKH.count
+        return listChungKhoan.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellPopupTableViewCell.identifer, for: indexPath) as! CellPopupTableViewCell
-        cell.lblText.text = listMaKH[indexPath.row].serCode
-        if serCode == listMaKH[indexPath.row].serCode {
+        cell.lblText.text = listChungKhoan[indexPath.row].serName
+        if serName == listChungKhoan[indexPath.row].serName {
             cell.btnCheckbox.setImage(UIImage(named:"correct"), for: .normal)
         } else {
             cell.btnCheckbox.setImage(UIImage(named:"checkbox"), for: .normal)
@@ -97,13 +97,13 @@ extension PopupMaKhachHangDienViewController: UITableViewDataSource {
     }
 }
 
-extension PopupMaKhachHangDienViewController: UISearchBarDelegate {
+extension PopupChungKhoanNCCViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
-            listMaKH = tempListMaKH.filter{ $0.serCode.contains(searchText) }
+            listChungKhoan = tempListChungKhoan.filter{ $0.serName.contains(searchText) }
             tableView.reloadData()
         } else {
-            listMaKH = tempListMaKH
+            listChungKhoan = tempListChungKhoan
             tableView.reloadData()
         }
     }
