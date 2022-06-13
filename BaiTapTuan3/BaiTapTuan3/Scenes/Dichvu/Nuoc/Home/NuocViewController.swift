@@ -35,6 +35,7 @@ final class NuocViewController: UIViewController, PopupNhaCungCapNuocImpl, Popup
         setupView()
         fetchDataOnLoad()
         loadViewTop()
+        title = "HÓA ĐƠN TIỀN NƯỚC"
     }
     
     override func viewWillAppear(_ animated: Bool) {
